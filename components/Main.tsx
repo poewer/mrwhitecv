@@ -54,7 +54,7 @@ export default function Main() {
                     className="text-6xl font-bold leading-tight"
                     style={{ color: "#37353E" }}
                 >
-                    G&aposday, I&aposm <br />
+                    G&apos;day, I&apos;m <br />
                     <span className="block">Michał Białek,</span>
                 </h1>
 
