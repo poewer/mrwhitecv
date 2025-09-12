@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
     SiJavascript,
     SiReact,
@@ -21,6 +23,24 @@ import {
     SiCss3
 } from "react-icons/si";
 
+
+// animacje dla listy
+const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1, // każdy skill wchodzi po kolei
+        },
+    },
+};
+
+// animacje dla pojedynczego skill
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+};
+
 export default function Skills() {
     const skills = {
         Backend: [
@@ -37,9 +57,9 @@ export default function Skills() {
             { name: "Next.js", icon: <SiNextdotjs size={24} color="white" /> },
             { name: "JavaScript", icon: <SiJavascript size={24} color="#f7df1e" /> },
             { name: "React", icon: <SiReact size={24} color="#61dafb" /> },
-            { name: "TypeScript", icon: <SiTypescript size={24} color="#3178c6" /> },            
+            { name: "TypeScript", icon: <SiTypescript size={24} color="#3178c6" /> },
             { name: "HTML", icon: <SiHtml5 size={24} color="#e34f26" /> },
-            { name: "CSS", icon: <SiCss3 size={24} color="#1572b6" /> },            
+            { name: "CSS", icon: <SiCss3 size={24} color="#1572b6" /> },
         ],
         Integrations: [
             {
@@ -91,17 +111,20 @@ export default function Skills() {
 
             <div className="w-full flex flex-col gap-20">
                 {Object.entries(skills).map(([category, items]) => (
-                    <div
-                        key={category}
-                        className="flex flex-row items-center"
-                    >
-                        {/* Category z ustaloną szerokością */}
-                        <h3 className="w-100 mr-12 text-2xl font-semibold text-white/70 uppercase tracking-wider text-left">
+                    <div key={category} className="flex flex-row items-start gap-16">
+                        {/* Category (lewa kolumna, bez animacji) */}
+                        <h3 className="w-56 text-2xl font-semibold text-white/70 uppercase tracking-wider">
                             {category}
                         </h3>
 
-                        {/* Lista skilli zawsze w jednej linii do lewej */}
-                        <div className="grid grid-cols-3 gap-x-2 gap-y-6 text-left flex-1">
+                        {/* Lista skilli (prawa kolumna, z animacją) */}
+                        <motion.div
+                            className="grid grid-cols-3 gap-x-16 gap-y-6 text-left flex-1"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                        >
                             {items.map((skill) => (
                                 <div
                                     key={skill.name}
@@ -111,10 +134,11 @@ export default function Skills() {
                                     <span>{skill.name}</span>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
             </div>
+
         </section>
     );
 
