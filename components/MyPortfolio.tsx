@@ -35,7 +35,7 @@ export default function MyProfile() {
         <h2 className="text-4xl font-bold mb-6 text-[#F8C471]">My Portfolio</h2>
 
         <p className="text-lg leading-relaxed mb-4">
-          Greetings, I'm Michał, a Python developer specializing in system
+          Greetings, I&aposm Michał, a Python developer specializing in system
           integration, automation, and workflow design. I build scalable services and
           microservices with Python, create custom workflows in n8n,
           and integrate advanced solutions such as Microsoft Graph API and LLM-based
@@ -44,7 +44,7 @@ export default function MyProfile() {
 
         <p className="text-lg leading-relaxed">
           My background includes large-scale integration projects with IBM App Connect
-          Enterprise (ESQL), working with SOAP, REST, and queuing systems. I'm also
+          Enterprise (ESQL), working with SOAP, REST, and queuing systems. I&aposm also
           experienced in databases (PostgreSQL, Elasticsearch, Redis), Docker, and
           testing. I enjoy collaborating with teams and clients to deliver robust,
           results-oriented solutions tailored to business needs.
