@@ -4,10 +4,8 @@ services:
     build: .
     container_name: nextjs-container
     ports:
-      - "3000:3000" # host:kontener
+      - "40084:3000"  # Zmień też port na 40084
     environment:
       - NODE_ENV=production
-    volumes:
-      - .:/app
-      - /app/node_modules
+    # Usuń volumes które nadpisują build!
     restart: unless-stopped
