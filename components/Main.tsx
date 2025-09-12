@@ -29,10 +29,10 @@ export default function Main() {
                 ></div>
 
                 {/* Mały akcent */}
-                <div
+                {/* <div
                     className="absolute top-16 left-16 w-4 h-4 rounded-full"
                     style={{ backgroundColor: "#E74C3C" }}
-                ></div>
+                ></div> */}
 
                 {/* Dodatkowy kształt w prawym górnym rogu */}
                 <div
