@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function MyProfile() {
   return (
@@ -6,41 +8,49 @@ export default function MyProfile() {
       id="myprofile"
       className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-20 bg-[#37353E] text-[#D3DAD9]"
     >
-      {/* Tekst */}
-      <div className="flex-1 max-w-2xl">
-        <h2 className="text-4xl font-bold mb-6">My Portfolio</h2>
+      {/* Tekst z animacją */}
+      <motion.div
+        className="flex-1 max-w-2xl "
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h2 className="text-4xl font-bold mb-6 text-[#F8C471]">My Portfolio</h2>
+
         <p className="text-lg leading-relaxed mb-4">
-          Greetings, I’m Muhammad Aamir Malik, a seasoned mobile app developer
-          with over 3 years of experience in the dynamic IT industry. My
-          expertise lies in crafting cutting-edge, full-stack mobile and hybrid
-          applications for Android and iOS platforms, utilizing the power of
-          React Native.
+          Greetings, I'm Michał, a Python developer specializing in system
+          integration, automation, and workflow design. I build scalable services and
+          microservices with Python, create custom workflows in n8n,
+          and integrate advanced solutions such as Microsoft Graph API and LLM-based
+          automation.
         </p>
-        <p className="text-lg leading-relaxed mb-4">
-          I take immense pride in my work, striving to develop applications that
-          are not only efficient but also user-friendly, catering to the diverse
-          needs of clients globally.
-        </p>
+
         <p className="text-lg leading-relaxed">
-          Having successfully delivered projects to satisfied clients worldwide,
-          I’ve gained valuable experience collaborating with individuals from
-          various cultures. My journey has taken me from local software houses
-          to platforms like Fiverr and Upwork, eventually leading me to work
-          with international companies.
+          My background includes large-scale integration projects with IBM App Connect
+          Enterprise (ESQL), working with SOAP, REST, and queuing systems. I'm also
+          experienced in databases (PostgreSQL, Elasticsearch, Redis), Docker, and
+          testing. I enjoy collaborating with teams and clients to deliver robust,
+          results-oriented solutions tailored to business needs.
         </p>
-      </div>
+      </motion.div>
 
       {/* Zdjęcie */}
       <div className="flex-1 flex justify-center mt-10 md:mt-0 md:ml-12 relative">
         <div className="relative w-64 h-72">
+          {/* Prostokąt w tle - przesunięty w prawo i w dół */}
+          <div className="absolute w-full h-full bg-[#F8C471] rounded-lg translate-x-6 translate-y-6 z-0"></div>
+
+          {/* Zdjęcie */}
           <Image
             src="/linkedin_mb_cv-rmbg.png"
             alt="Michał Białek"
-            layout="fill"
-            objectFit="cover"
-            className="rounded shadow-lg"
+            fill
+            className="rounded-lg shadow-lg object-cover relative z-10"
           />
-          <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-[#D3DAD9] rounded"></div>
+
+          {/* Ramka - na wierzchu */}
+          <div className="absolute inset-0 w-full h-full border-2 border-[#D3DAD9] rounded-lg z-20 pointer-events-none"></div>
         </div>
       </div>
     </section>

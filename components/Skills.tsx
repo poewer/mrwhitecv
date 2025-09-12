@@ -113,7 +113,7 @@ export default function Skills() {
                 {Object.entries(skills).map(([category, items]) => (
                     <div key={category} className="flex flex-row items-start gap-16">
                         {/* Category (lewa kolumna, bez animacji) */}
-                        <h3 className="w-56 text-2xl font-semibold text-white/70 uppercase tracking-wider">
+                        <h3 className="w-56 text-2xl font-semibold text-white/70 uppercase tracking-wider setPointerOn hover:text-white transition">
                             {category}
                         </h3>
 
@@ -128,7 +128,7 @@ export default function Skills() {
                             {items.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className="flex items-center gap-3 text-lg hover:text-[#F8C471] transition justify-start"
+                                    className="flex items-center gap-3 text-lg hover:text-[#F8C471] transition justify-start setPointerOn"
                                 >
                                     {skill.icon}
                                     <span>{skill.name}</span>
