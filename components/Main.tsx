@@ -90,7 +90,7 @@ export default function Main() {
             backgroundColor: "transparent",
           }}
         >
-          {t.contact}
+          <a href="mailto:michal.bialek@opoczta.pl">{t.contact}</a>
         </button>
       </div>
 
