@@ -14,7 +14,7 @@ export default function Footer() {
         want to say hi, I’ll try my best to get back to you!
       </p>
       <a
-        href="michal.bialek@opoczta.pl"
+        href="mailto:michal.bialek@opoczta.pl"
         className="px-6 py-3 border-2 border-[#F8C471] text-[#F8C471] rounded hover:bg-[#F8C471] hover:text-[#37353E] transition-all"
       >
         Say Hello

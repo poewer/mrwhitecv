@@ -7,7 +7,7 @@ export default function SideElements() {
     <>
       {/* Lewy sidebar */}
       <div
-        className="fixed left-0 top-0 h-screen w-20 flex flex-col items-center py-6 shadow-md z-10"
+        className="fixed left-0 top-0 h-screen w-20 hidden md:flex flex-col items-center py-6 shadow-md z-10"
         style={{ backgroundColor: "#37353E" }}
       >
         {/* Avatar */}

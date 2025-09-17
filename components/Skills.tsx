@@ -28,7 +28,7 @@ export default function Skills() {
         Backend: [
             { name: "Python", icon: <SiPython size={24} color="#3776ab" /> },
             { name: "Sanic", icon: <SiSanic size={24} color="#3776ab" /> },
-            { name: "Flask", icon: <SiFlask size={24} color="#ffffffff" /> },
+            { name: "Flask", icon: <SiFlask size={24} color="#ffffff" /> },
             { name: "Node.js", icon: <SiNodedotjs size={24} color="#68a063" /> },
             { name: "SOAP / REST", icon: <span className="text-lg">🌐</span> },
             { name: "Microservices", icon: <span className="text-lg">⚙️</span> },
@@ -44,8 +44,8 @@ export default function Skills() {
         ],
         Integrations: [
             {
-                name: "n8n ",
-                icon: <Image src="/n8n_icon.png" alt="n8n" width={32} height={32} />
+                name: "n8n",
+                icon: <Image src="/n8n_icon.png" alt="n8n" width={24} height={24} />
             },
             { name: "IBM App Connect Enterprise", icon: <span className="text-lg">💡</span> },
             { name: "SOAP / REST APIs", icon: <span className="text-lg">🔌</span> },
@@ -84,93 +84,36 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="min-h-screen px-8 md:px-20 py-20 bg-[#3C3B44] text-white flex flex-col items-center justify-center relative"
+            className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-[#3C3B44] text-white flex flex-col items-center justify-center relative"
         >
-            {/* Ozdobne elementy w tle */}
-            <div className="absolute top-10 left-12 w-4 h-4 rounded-full bg-[#F8C471] opacity-50 animate-pulse" />
-            <div className="absolute top-24 right-16 w-3 h-3 border border-[#F8C471] rounded-full opacity-40" />
-            <div className="absolute top-1/4 left-8 w-2 h-8 bg-white opacity-20 rounded-full" />
-            
-            {/* Większy element dekoracyjny - gear/cog */}
-            <div className="absolute top-20 right-1/4 w-10 h-10 border border-[#F8C471] opacity-30 rotate-45">
-                <div className="absolute inset-1 w-8 h-8 border border-white opacity-25 rotate-45" />
-                <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-[#F8C471] rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-60" />
-            </div>
-            
-            {/* Elementy symbolizujące kod/technologie */}
-            <div className="absolute bottom-1/4 left-16 flex flex-col space-y-1 opacity-25">
-                <div className="w-8 h-0.5 bg-[#F8C471] rounded-full" />
-                <div className="w-6 h-0.5 bg-white rounded-full" />
-                <div className="w-10 h-0.5 bg-[#F8C471] rounded-full" />
-                <div className="w-4 h-0.5 bg-white rounded-full" />
-            </div>
-            
-            {/* Binarne elementy (0 i 1) */}
-            <div className="absolute top-1/3 right-10 opacity-20 font-mono text-sm">
-                <div className="text-[#F8C471]">1</div>
-                <div className="text-white mt-2">0</div>
-                <div className="text-[#F8C471] mt-2">1</div>
-            </div>
-            
-            {/* Hexagon pattern */}
-            <div className="absolute bottom-1/3 right-1/4 opacity-20">
-                <div className="w-6 h-6 border border-white transform rotate-45 relative">
-                    <div className="absolute inset-1 border border-[#F8C471] rotate-45" />
-                </div>
-            </div>
-            
-            {/* Network/connection lines */}
-            <div className="absolute top-1/2 left-4 opacity-15">
-                <div className="w-12 h-0.5 bg-white rounded-full" />
-                <div className="w-3 h-3 border border-[#F8C471] rounded-full mt-2" />
-                <div className="w-8 h-0.5 bg-[#F8C471] rounded-full mt-2" />
-            </div>
-            
-            {/* Małe kropki rozrzucone */}
-            <div className="absolute bottom-20 left-1/3 w-1 h-1 rounded-full bg-[#F8C471] opacity-70" />
-            <div className="absolute top-40 left-1/4 w-1 h-1 rounded-full bg-white opacity-50" />
-            <div className="absolute bottom-32 right-1/3 w-1 h-1 rounded-full bg-[#F8C471] opacity-60" />
-            <div className="absolute top-3/4 right-20 w-1 h-1 rounded-full bg-white opacity-40" />
-            
-            {/* Element przypominający terminal/console */}
-            <div className="absolute bottom-16 right-12 w-8 h-6 border border-white opacity-15 rounded-sm">
-                <div className="w-1 h-1 bg-[#F8C471] rounded-full mt-1 ml-1 animate-pulse" />
-                <div className="w-4 h-0.5 bg-white opacity-50 rounded-full mt-1 ml-1" />
-                <div className="w-3 h-0.5 bg-white opacity-30 rounded-full mt-0.5 ml-1" />
-            </div>
-
-            <h2 className="text-6xl font-bold mb-16 text-center text-white/70">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-10 sm:mb-16 text-center text-white/70">
                 Skills
             </h2>
 
-            <div className="w-full flex flex-col gap-20">
+            <div className="w-full flex flex-col gap-12 md:gap-20">
                 {Object.entries(skills).map(([category, items]) => (
-                    <div key={category} className="flex flex-row items-start gap-16 relative">
-                        {/* Ozdobne elementy przy każdej kategorii */}
-                        <div className="absolute -left-4 top-2 w-2 h-2 rounded-full bg-[#F8C471] opacity-30" />
-                        
-                        {/* Category (lewa kolumna, bez animacji) */}
-                        <h3 className="w-56 text-2xl font-semibold text-white/70 uppercase tracking-wider setPointerOn hover:text-white transition relative">
+                    <div
+                        key={category}
+                        className="flex flex-col md:flex-row items-start md:gap-16 gap-8 relative"
+                    >
+                        {/* Kategoria */}
+                        <h3 className="text-xl sm:text-2xl md:text-2xl font-semibold text-white/70 uppercase tracking-wider mb-4 md:mb-0 w-full md:w-56">
                             {category}
-                            {/* Mała linia pod kategorią */}
-                            <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#F8C471] opacity-40 rounded-full" />
+                            <div className="w-8 h-0.5 bg-[#F8C471] opacity-40 rounded-full mt-1" />
                         </h3>
 
-                        {/* Lista skilli (prawa kolumna, z animacją) */}
+                        {/* Lista */}
                         <motion.div
-                            className="grid grid-cols-3 gap-x-16 gap-y-6 text-left flex-1 relative"
-                            initial={{ opacity: 0, y: 50 }}
+                            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 sm:gap-x-12 gap-y-4 sm:gap-y-6 flex-1"
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
-                            {/* Ozdobny element w prawym górnym rogu listy */}
-                            <div className="absolute -top-2 -right-2 w-1 h-1 rounded-full bg-white opacity-40" />
-                            
                             {items.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className="flex items-center gap-3 text-lg hover:text-[#F8C471] transition justify-start setPointerOn"
+                                    className="flex items-center gap-3 text-base sm:text-lg hover:text-[#F8C471] transition"
                                 >
                                     {skill.icon}
                                     <span>{skill.name}</span>
@@ -181,5 +124,6 @@ export default function Skills() {
                 ))}
             </div>
         </section>
+
     );
 }

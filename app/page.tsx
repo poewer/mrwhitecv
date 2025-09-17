@@ -13,7 +13,7 @@ export default function Home() {
       <Sidebar />
 
       {/* Główna zawartość strony */}
-      <div className="ml-20">
+      <div className="ml-0 md:ml-20 overflow-x-hidden">
         <Main />
         <MyProfile />
         <WorkExperience />
