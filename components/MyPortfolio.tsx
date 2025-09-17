@@ -1,8 +1,14 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { translations } from "@/utils/translations";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function MyProfile() {
+
+    const { lang } = useLanguage();
+    const t = translations[lang];
+
   return (
     <section
       id="myprofile"
@@ -29,24 +35,15 @@ export default function MyProfile() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#F8C471]">
-          My Portfolio
+          {t.portfolioTitle}
         </h2>
 
         <p className="text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
-          Greetings, I&apos;m Michał, a Python developer specializing in system
-          integration, automation, and workflow design. I build scalable services
-          and microservices with Python, create custom workflows in n8n,
-          and integrate advanced solutions such as Microsoft Graph API and
-          LLM-based automation.
+          {t.portfolioP1}
         </p>
 
         <p className="text-base sm:text-lg leading-relaxed">
-          My background includes large-scale integration projects with IBM App
-          Connect Enterprise (ESQL), working with SOAP, REST, and queuing systems.
-          I&apos;m also experienced in databases (PostgreSQL, Elasticsearch,
-          Redis), Docker, and testing. I enjoy collaborating with teams and
-          clients to deliver robust, results-oriented solutions tailored to
-          business needs.
+          {t.portfolioP2}
         </p>
       </motion.div>
 
