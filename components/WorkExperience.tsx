@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { translations } from "@/utils/translations";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -15,13 +15,23 @@ export default function WorkExperience() {
   const { lang } = useLanguage();
   const t = translations[lang];
 
-  // sortujemy wg daty
-  const experiences: Experience[] = [...t.experiences].sort(
-    (a, b) => b.startDate.localeCompare(a.startDate)
+  // Sortujemy tylko gdy zmieni się język
+  const experiences: Experience[] = useMemo(
+    () => [...t.experiences].sort((a, b) => b.startDate.localeCompare(a.startDate)),
+    [t.experiences]
   );
 
-  // domyślnie bierzemy najnowsze doświadczenie (zamiast "3-ciej pozycji")
-  const [selected, setSelected] = useState<Experience>(experiences[0]);
+  // Trzymamy indeks zamiast obiektu
+  const [selectedIdx, setSelectedIdx] = useState(0);
+
+  // Gdy zmieni się język / długość listy, upewnij się, że indeks jest w zakresie
+  useEffect(() => {
+    if (selectedIdx >= experiences.length) {
+      setSelectedIdx(0);
+    }
+  }, [experiences.length, selectedIdx]);
+
+  const selected = experiences[selectedIdx];
 
   return (
     <section
@@ -40,12 +50,12 @@ export default function WorkExperience() {
       <div className="flex flex-col md:flex-row gap-12 relative">
         {/* Lewa lista firm */}
         <div className="md:w-1/4 border-l border-gray-600 pl-4 space-y-6 relative">
-          {experiences.map((exp) => (
+          {experiences.map((exp, i) => (
             <button
-              key={exp.company}
-              onClick={() => setSelected(exp)}
+              key={exp.startDate} // stabilny klucz niezależny od tłumaczenia
+              onClick={() => setSelectedIdx(i)}
               className={`setPointerOn block text-left transition-colors ${
-                selected.company === exp.company
+                selectedIdx === i
                   ? "text-[#F8C471] font-semibold"
                   : "text-gray-400 hover:text-[#F8C471]"
               }`}
@@ -59,7 +69,6 @@ export default function WorkExperience() {
         <div className="md:w-3/4 relative">
           <h3 className="text-2xl font-semibold mb-2">{selected.role}</h3>
           <p className="text-gray-400 mb-6">{selected.period}</p>
-
           <ul className="space-y-3 list-disc pl-5 text-lg">
             {selected.details.map((item, i) => (
               <li key={i}>{item}</li>
