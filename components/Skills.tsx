@@ -58,9 +58,13 @@ export default function Skills() {
       { name: "GitHub", icon: <SiGithub size={24} color="white" /> },
       { name: "Linux (terminal)", icon: <SiLinux size={24} color="#FCC624" /> },
     ],
+    Testing: [
+      { name: "Unit testing", icon: <span className="text-lg">🧪</span> },
+      { name: "Integration testing", icon: <span className="text-lg">🔬</span> },
+      { name: "Debugging", icon: <span className="text-lg">🐛</span> },
+    ],
     Other: [
       { name: "Automation", icon: <span className="text-lg">⚡</span> },
-      { name: "Debugging & Testing", icon: <span className="text-lg">🧪</span> },
       { name: "Technical documentation", icon: <span className="text-lg">📑</span> },
       { name: "Data scraping", icon: <span className="text-lg">🕷️</span> },
       { name: "ESQL", icon: <span className="text-lg">∑</span> },

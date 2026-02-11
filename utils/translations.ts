@@ -30,21 +30,18 @@ export const translations = {
         workExpTitle: "My Work Experiences",
         experiences: [
             {
-                company: "IBPM 2025 - present",
-                role: "Software Engineer",
-                period: "Warsaw | Oct 2022 – present",
-                startDate: "2025-09-09",
+                company: "Voltus",
+                role: "Software Engineer / Python Developer",
+                period: "Gdynia | Nov 2025 – Jan 2026",
+                startDate: "2025-11-01",
                 details: [
-                    "Specialized in data processing and workflow automation.",
-                    "Designed and maintained complex workflows in n8n to integrate multiple systems and services.",
-                    "Developed microservices and backend services in Python (Sanic, Flask) to support automation pipelines.",
-                    "Worked with APIs, queuing systems, and enterprise integration patterns.",
-                    "Ensured scalability and reliability of workflows through testing, debugging, and optimization.",
-                    "Collaborated with cross-functional teams to deliver robust and maintainable integration solutions.",
+                    "Developed and maintained backend systems in Python.",
+                    "Implemented integration solutions and automated data processing workflows.",
+                    "Collaborated in a distributed environment and optimized service performance.",
                 ],
             },
             {
-                company: "Agentic 2025 - 2025",
+                company: "Agentic",
                 role: "n8n & Python Developer",
                 period: "Warsaw | Feb 2025 – Oct 2025",
                 startDate: "2025-02-01",
@@ -57,10 +54,10 @@ export const translations = {
                 ],
             },
             {
-                company: "IBPM 2024 - 2025",
+                company: "IBPM",
                 role: "Python Developer",
                 period: "Warsaw | Mar 2024 – Feb 2025",
-                startDate: "2024-01-01",
+                startDate: "2024-03-01",
                 details: [
                     "Developed services and microservices in Python (Sanic) with data processing libraries.",
                     "Worked with queuing systems and ESB to automate business processes.",
@@ -70,10 +67,10 @@ export const translations = {
                 ],
             },
             {
-                company: "IBPM 2022 - 2024",
+                company: "IBPM",
                 role: "ESB Developer / Integration Developer",
                 period: "Warsaw | Jul 2022 – Feb 2024",
-                startDate: "2022-10-01",
+                startDate: "2022-07-01",
                 details: [
                     "Developed and maintained flows in IBM App Connect Enterprise Toolkit 12 (ESQL).",
                     "Built integrations based on SOAP, REST, and queuing systems.",
@@ -93,6 +90,7 @@ export const translations = {
             LLMs: "LLMs",
             Database: "Database",
             DevOps: "DevOps",
+            Testing: "Testing",
             Other: "Other",
         },
         footerGetInTouch: "Get in touch",
@@ -128,21 +126,18 @@ export const translations = {
         workExpTitle: "Moje Doświadczenia Zawodowe",
         experiences: [
             {
-                company: "IBPM 2025 - obecnie",
-                role: "Inżynier Oprogramowania",
-                period: "Warszawa | Paź 2022 – obecnie",
-                startDate: "2025-09-09",
+                company: "Voltus",
+                role: "Software Engineer / Python Developer",
+                period: "Gdynia | Lis 2025 – Sty 2026",
+                startDate: "2025-11-01",
                 details: [
-                    "Specjalizacja w przetwarzaniu danych i automatyzacji procesów.",
-                    "Projektowanie i utrzymywanie złożonych workflowów w n8n integrujących wiele systemów i usług.",
-                    "Tworzenie mikroserwisów i backendów w Pythonie (Sanic, Flask) wspierających automatyzację.",
-                    "Praca z API, systemami kolejkowymi i wzorcami integracyjnymi.",
-                    "Zapewnienie skalowalności i niezawodności dzięki testom, debugowaniu i optymalizacji.",
-                    "Współpraca z zespołami interdyscyplinarnymi w celu dostarczenia stabilnych rozwiązań integracyjnych.",
+                    "Rozwój i utrzymanie systemów backendowych w języku Python.",
+                    "Implementacja rozwiązań integracyjnych i automatyzacja procesów przetwarzania danych.",
+                    "Współpraca w środowisku rozproszonym i optymalizacja wydajności usług.",
                 ],
             },
             {
-                company: "Agentic 2025 - 2025",
+                company: "Agentic",
                 role: "Programista n8n & Python",
                 period: "Warszawa | Lut 2025 – Paź 2025",
                 startDate: "2025-02-01",
@@ -155,10 +150,10 @@ export const translations = {
                 ],
             },
             {
-                company: "IBPM 2024 - 2025",
+                company: "IBPM",
                 role: "Programista Python",
                 period: "Warszawa | Mar 2024 – Lut 2025",
-                startDate: "2024-01-01",
+                startDate: "2024-03-01",
                 details: [
                     "Tworzenie usług i mikroserwisów w Pythonie (Sanic) z wykorzystaniem bibliotek do przetwarzania danych.",
                     "Praca z systemami kolejkowymi i ESB w celu automatyzacji procesów biznesowych.",
@@ -168,10 +163,10 @@ export const translations = {
                 ],
             },
             {
-                company: "IBPM 2022 - 2024",
+                company: "IBPM",
                 role: "ESB Developer / Programista Integracji",
                 period: "Warszawa | Lip 2022 – Lut 2024",
-                startDate: "2022-10-01",
+                startDate: "2022-07-01",
                 details: [
                     "Tworzenie i utrzymywanie przepływów w IBM App Connect Enterprise Toolkit 12 (ESQL).",
                     "Budowanie integracji opartych na SOAP, REST oraz systemach kolejkowych.",
@@ -190,6 +185,7 @@ export const translations = {
             LLMs: "LLM-y",
             Database: "Bazy danych",
             DevOps: "DevOps",
+            Testing: "Testowanie",
             Other: "Inne",
         },
 

@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@fdorantesm/react-skill-icons": "^1.0.5",
     "framer-motion": "^12.23.12",
     "next": "15.5.3",
     "react": "19.1.0",

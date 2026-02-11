@@ -12,9 +12,11 @@ export default function HeaderSection() {
   }, [isMenuOpen]);
 
   const handleDownloadCV = () => {
+    const isPolish = lang === "pl";
+    const fileName = isPolish ? "pl_michal_bialek_cv.pdf" : "en_michal_bialek_cv.pdf";
     const link = document.createElement("a");
-    link.href = "/CV_Michal_Bialek.pdf";
-    link.download = "CV_Michal_Bialek.pdf";
+    link.href = `/${fileName}`;
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
