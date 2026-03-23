@@ -30,10 +30,28 @@ export const translations = {
         workExpTitle: "My Work Experiences",
         experiences: [
             {
+                company: "Confidential (NDA)",
+                role: "Python / AI Engineer",
+                period: "Remote | Oct 2025 – Present",
+                startDate: "2025-10-01",
+                endDate: "9999-12-31",
+                details: [
+                    "Developed backend services and automation systems using Python.",
+                    "Built integrations between various tools and external services.",
+                    "Implemented CI/CD workflows using Git and GitHub Actions.",
+                    "Designed and deployed containerized applications (Docker).",
+                    "Developed solutions leveraging LLMs and Computer Vision.",
+                    "Worked with vector databases for semantic search and data retrieval.",
+                    "Automated content generation pipelines, increasing production output from ~100 to ~300 documents per day.",
+                ],
+            },
+            {
                 company: "Voltus",
                 role: "Software Engineer / Python Developer",
                 period: "Gdynia | Nov 2025 – Jan 2026",
                 startDate: "2025-11-01",
+                endDate: "2026-01-31",
+                url: "https://www.linkedin.com/company/voltusenergy/posts/?feedView=all",
                 details: [
                     "Developed and maintained backend systems in Python.",
                     "Implemented integration solutions and automated data processing workflows.",
@@ -45,6 +63,8 @@ export const translations = {
                 role: "n8n & Python Developer",
                 period: "Warsaw | Feb 2025 – Oct 2025",
                 startDate: "2025-02-01",
+                endDate: "2025-10-31",
+                url: "https://www.linkedin.com/company/agenticpolska/posts/?feedView=all",
                 details: [
                     "Created and optimized workflows in n8n.",
                     "Integrated with various services including Microsoft Graph API.",
@@ -54,10 +74,28 @@ export const translations = {
                 ],
             },
             {
+                company: "Grupa EFL",
+                role: "SOA Developer",
+                period: "Warsaw | Mar 2023 – Mar 2024",
+                startDate: "2023-03-01",
+                endDate: "2024-03-31",
+                url: "https://www.linkedin.com/company/efl-sa/posts/?feedView=all",
+                details: [
+                    "Designed and implemented SOA integration flows using IBM App Connect Enterprise (ESQL).",
+                    "Created and maintained service-oriented integrations via SOAP, REST, and message queuing.",
+                    "Processed and transformed complex data structures using XML and XSD schemas.",
+                    "Conducted debugging sessions and ensured quality of integration solutions through testing.",
+                    "Participated in architectural reviews and contributed to technical documentation.",
+                    "Coordinated with cross-functional teams using Git and Scrum methodology.",
+                ],
+            },
+            {
                 company: "IBPM",
                 role: "Python Developer",
                 period: "Warsaw | Mar 2024 – Feb 2025",
                 startDate: "2024-03-01",
+                endDate: "2025-02-28",
+                url: "https://www.linkedin.com/company/ibpm-pro-s-a-/posts/?feedView=all",
                 details: [
                     "Developed services and microservices in Python (Sanic) with data processing libraries.",
                     "Worked with queuing systems and ESB to automate business processes.",
@@ -71,6 +109,8 @@ export const translations = {
                 role: "ESB Developer / Integration Developer",
                 period: "Warsaw | Jul 2022 – Feb 2024",
                 startDate: "2022-07-01",
+                endDate: "2024-02-29",
+                url: "https://www.linkedin.com/company/ibpm-pro-s-a-/posts/?feedView=all",
                 details: [
                     "Developed and maintained flows in IBM App Connect Enterprise Toolkit 12 (ESQL).",
                     "Built integrations based on SOAP, REST, and queuing systems.",
@@ -126,10 +166,28 @@ export const translations = {
         workExpTitle: "Moje Doświadczenia Zawodowe",
         experiences: [
             {
+                company: "Projekt poufny (NDA)",
+                role: "Python / AI Engineer",
+                period: "Zdalnie | Paź 2025 – obecnie",
+                startDate: "2025-10-01",
+                endDate: "9999-12-31",
+                details: [
+                    "Tworzenie systemów backendowych i automatyzacji w Pythonie.",
+                    "Budowanie integracji pomiędzy narzędziami i zewnętrznymi usługami.",
+                    "Implementacja CI/CD z wykorzystaniem Git i GitHub Actions.",
+                    "Projektowanie i wdrażanie aplikacji w kontenerach (Docker).",
+                    "Tworzenie rozwiązań z wykorzystaniem LLM oraz Computer Vision.",
+                    "Praca z bazami wektorowymi (semantic search, retrieval).",
+                    "Automatyzacja pipeline’ów generowania treści – wzrost produkcji z ~100 do ~300 dokumentów dziennie.",
+                ],
+            },
+            {
                 company: "Voltus",
                 role: "Software Engineer / Python Developer",
                 period: "Gdynia | Lis 2025 – Sty 2026",
                 startDate: "2025-11-01",
+                endDate: "2026-01-31",
+                url: "https://www.linkedin.com/company/voltusenergy/posts/?feedView=all",
                 details: [
                     "Rozwój i utrzymanie systemów backendowych w języku Python.",
                     "Implementacja rozwiązań integracyjnych i automatyzacja procesów przetwarzania danych.",
@@ -141,6 +199,8 @@ export const translations = {
                 role: "Programista n8n & Python",
                 period: "Warszawa | Lut 2025 – Paź 2025",
                 startDate: "2025-02-01",
+                endDate: "2025-10-31",
+                url: "https://www.linkedin.com/company/agenticpolska/posts/?feedView=all",
                 details: [
                     "Tworzenie i optymalizacja workflowów w n8n.",
                     "Integracje z różnymi usługami, w tym Microsoft Graph API.",
@@ -150,10 +210,28 @@ export const translations = {
                 ],
             },
             {
+                company: "Grupa EFL",
+                role: "Programista SOA",
+                period: "Warszawa | Mar 2023 – Mar 2024",
+                startDate: "2023-03-01",
+                endDate: "2024-03-31",
+                url: "https://www.linkedin.com/company/efl-sa/posts/?feedView=all",
+                details: [
+                    "Projektowanie i implementacja przepływów integracyjnych SOA w oparciu o IBM App Connect Enterprise (ESQL).",
+                    "Tworzenie i utrzymywanie integracji usługowych poprzez SOAP, REST oraz systemy kolejkowe.",
+                    "Przetwarzanie i transformacja złożonych struktur danych z wykorzystaniem XML i schematów XSD.",
+                    "Przeprowadzanie sesji debugowania oraz zapewnienie jakości rozwiązań integracyjnych poprzez testy.",
+                    "Udział w przeglądach architektonicznych oraz tworzenie dokumentacji technicznej.",
+                    "Koordynacja pracy z zespołami interdyscyplinarnymi przy użyciu Gita i metodologii Scrum.",
+                ],
+            },
+            {
                 company: "IBPM",
                 role: "Programista Python",
                 period: "Warszawa | Mar 2024 – Lut 2025",
                 startDate: "2024-03-01",
+                endDate: "2025-02-28",
+                url: "https://www.linkedin.com/company/ibpm-pro-s-a-/posts/?feedView=all",
                 details: [
                     "Tworzenie usług i mikroserwisów w Pythonie (Sanic) z wykorzystaniem bibliotek do przetwarzania danych.",
                     "Praca z systemami kolejkowymi i ESB w celu automatyzacji procesów biznesowych.",
@@ -167,6 +245,8 @@ export const translations = {
                 role: "ESB Developer / Programista Integracji",
                 period: "Warszawa | Lip 2022 – Lut 2024",
                 startDate: "2022-07-01",
+                endDate: "2024-02-29",
+                url: "https://www.linkedin.com/company/ibpm-pro-s-a-/posts/?feedView=all",
                 details: [
                     "Tworzenie i utrzymywanie przepływów w IBM App Connect Enterprise Toolkit 12 (ESQL).",
                     "Budowanie integracji opartych na SOAP, REST oraz systemach kolejkowych.",

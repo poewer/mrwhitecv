@@ -6,7 +6,7 @@ import { translations } from "@/utils/translations";
 import {
   SiJavascript, SiReact, SiNextdotjs, SiPython, SiNodedotjs, SiPostgresql,
   SiDocker, SiKubernetes, SiGit, SiGithub, SiLinux, SiRedis, SiElastic,
-  SiHtml5, SiSanic, SiFlask, SiRabbitmq, SiTypescript, SiCss3
+  SiHtml5, SiSanic, SiFlask, SiRabbitmq, SiTypescript, SiCss3, SiGithubactions
 } from "react-icons/si";
 
 export default function Skills() {
@@ -18,6 +18,7 @@ export default function Skills() {
       { name: "Python", icon: <SiPython size={24} color="#3776ab" /> },
       { name: "Sanic", icon: <SiSanic size={24} color="#3776ab" /> },
       { name: "Flask", icon: <SiFlask size={24} color="#ffffff" /> },
+      { name: "Starlette", icon: <span className="text-lg">⭐</span> },
       { name: "Node.js", icon: <SiNodedotjs size={24} color="#68a063" /> },
       { name: "SOAP / REST", icon: <span className="text-lg">🌐</span> },
       { name: "Microservices", icon: <span className="text-lg">⚙️</span> },
@@ -57,6 +58,7 @@ export default function Skills() {
       { name: "Git", icon: <SiGit size={24} color="#f34f29" /> },
       { name: "GitHub", icon: <SiGithub size={24} color="white" /> },
       { name: "Linux (terminal)", icon: <SiLinux size={24} color="#FCC624" /> },
+      { name: "GitHub Actions", icon: <SiGithubactions size={24} color="#2088ff" /> },
     ],
     Testing: [
       { name: "Unit testing", icon: <span className="text-lg">🧪</span> },

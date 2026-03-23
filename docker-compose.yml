@@ -1,11 +1,10 @@
 version: "3.9"
 services:
   nextjs-app:
-    build: .
+    image: ghcr.io/poewer/mrwhitecv:latest
     container_name: nextjs-container
     ports:
-      - "40084:3000"  # Zmień też port na 40084
+      - "40084:3000"
     environment:
       - NODE_ENV=production
-    # Usuń volumes które nadpisują build!
     restart: unless-stopped

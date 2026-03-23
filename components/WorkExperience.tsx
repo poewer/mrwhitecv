@@ -8,6 +8,8 @@ type Experience = {
   role: string;
   period: string;
   startDate: string;
+  endDate: string;
+  url?: string;
   details: string[];
 };
 
@@ -17,7 +19,7 @@ export default function WorkExperience() {
 
   // Sortujemy tylko gdy zmieni się język
   const experiences: Experience[] = useMemo(
-    () => [...t.experiences].sort((a, b) => b.startDate.localeCompare(a.startDate)),
+    () => [...t.experiences].sort((a, b) => b.endDate.localeCompare(a.endDate) || b.startDate.localeCompare(a.startDate)),
     [t.experiences]
   );
 
@@ -68,7 +70,22 @@ export default function WorkExperience() {
         {/* Prawa część */}
         <div className="md:w-3/4 relative">
           <h3 className="text-2xl font-semibold mb-2">{selected.role}</h3>
-          <p className="text-gray-400 mb-6">{selected.period}</p>
+          <p className="text-gray-400 mb-6">
+            {selected.period}
+            {selected.url && (
+              <>
+                {" | "}
+                <a
+                  href={selected.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-400 hover:text-sky-300 transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </>
+            )}
+          </p>
           <ul className="space-y-3 list-disc pl-5 text-lg">
             {selected.details.map((item, i) => (
               <li key={i}>{item}</li>
