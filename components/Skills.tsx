@@ -103,7 +103,7 @@ export default function Skills() {
               {items.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 text-base sm:text-lg hover:text-[#F8C471] transition"
+                  className="flex items-center gap-3 text-base sm:text-lg hover:text-[#F8C471] transition cursor-pointer"
                 >
                   {skill.icon}
                   <span>{skill.name}</span>
