@@ -56,9 +56,9 @@ export const translations = {
         workExpTitle: "My Work Experiences",
         experiences: [
             {
-                company: "Confidential (NDA)",
+                company: "Iberion",
                 role: "Python / AI Engineer",
-                period: "Remote | Oct 2025 – Present",
+                period: "Warsaw | Oct 2025 – Present",
                 startDate: "2025-10-01",
                 endDate: "9999-12-31",
                 details: [
@@ -242,9 +242,9 @@ export const translations = {
         workExpTitle: "Moje Doświadczenia Zawodowe",
         experiences: [
             {
-                company: "Projekt poufny (NDA)",
+                company: "Iberion",
                 role: "Python / AI Engineer",
-                period: "Zdalnie | Paź 2025 – obecnie",
+                period: "Warszawa | Paź 2025 – obecnie",
                 startDate: "2025-10-01",
                 endDate: "9999-12-31",
                 details: [
