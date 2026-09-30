@@ -23,7 +23,7 @@ export const translations = {
         ],
         aboutStats: [
             { value: "3+", label: "Years of experience" },
-            { value: "5", label: "Companies" },
+            { value: "6", label: "Companies" },
             { value: "10+", label: "Technologies" },
         ],
 
@@ -56,11 +56,28 @@ export const translations = {
         workExpTitle: "My Work Experiences",
         experiences: [
             {
+                company: "WeNet Group S.A.",
+                role: "Mid Software Developer / AI Developer",
+                period: "Warsaw (remote) | May 2026 – Present",
+                startDate: "2026-05-01",
+                endDate: "9999-12-31",
+                details: [
+                    "Developing a platform whose goal is to automate and scale business processes using AI, combining AI, backend, system integration, platform technologies and selected frontend elements.",
+                    "Implementing LLM-based solutions, AI agents and intelligent workflows (LiteLLM), and using AI-assisted development tools such as Claude Code in daily work.",
+                    "Building APIs, services and microservices in Python with PostgreSQL, AlloyDB, RabbitMQ and asynchronous processing.",
+                    "Implementing asynchronous, distributed workflows with Temporal and RabbitMQ.",
+                    "Co-creating shared, reusable solutions used by other teams, including authentication mechanisms, reusable services, APIs and microservices.",
+                    "Integrating services and components delivered by multiple development teams into the main product.",
+                    "Working with containerized applications and K3s, Argo CD, GitLab CI/CD, Key Vault and GitOps; monitoring services and diagnosing issues with Grafana.",
+                    "Developing selected parts of the main application interface in Next.js and integrating the frontend with backend and AI services.",
+                ],
+            },
+            {
                 company: "Iberion",
                 role: "Python / AI Engineer",
-                period: "Warsaw | Oct 2025 – Present",
+                period: "Warsaw | Oct 2025 – Apr 2026",
                 startDate: "2025-10-01",
-                endDate: "9999-12-31",
+                endDate: "2026-04-30",
                 details: [
                     "Developed backend services and automation systems using Python.",
                     "Built integrations between various tools and external services.",
@@ -211,7 +228,7 @@ export const translations = {
         ],
         aboutStats: [
             { value: "3+", label: "Lata doświadczenia" },
-            { value: "5", label: "Firm" },
+            { value: "6", label: "Firm" },
             { value: "10+", label: "Technologii" },
         ],
 
@@ -242,11 +259,28 @@ export const translations = {
         workExpTitle: "Moje Doświadczenia Zawodowe",
         experiences: [
             {
+                company: "WeNet Group S.A.",
+                role: "Mid Software Developer / AI Developer",
+                period: "Warszawa (zdalnie) | Maj 2026 – obecnie",
+                startDate: "2026-05-01",
+                endDate: "9999-12-31",
+                details: [
+                    "Rozwój platformy, której celem jest automatyzacja i skalowanie procesów biznesowych z wykorzystaniem AI – praca z AI, backendem, integracją systemów, technologiami platformowymi i wybranymi elementami frontendu.",
+                    "Implementacja rozwiązań z LLM, agentami AI i inteligentnymi workflow (LiteLLM) oraz wykorzystanie narzędzi AI-assisted development, takich jak Claude Code, w codziennej pracy.",
+                    "Rozwój API, usług i mikroserwisów w Pythonie z PostgreSQL, AlloyDB, RabbitMQ i przetwarzaniem asynchronicznym.",
+                    "Implementacja asynchronicznych i rozproszonych workflow z wykorzystaniem Temporal oraz RabbitMQ.",
+                    "Współtworzenie wspólnych, reużywalnych rozwiązań wykorzystywanych przez inne zespoły, m.in. mechanizmów autentykacji, reużywalnych usług, API i mikroserwisów.",
+                    "Integracja usług i komponentów dostarczanych przez wiele zespołów developerskich z głównym produktem.",
+                    "Praca z aplikacjami konteneryzowanymi oraz K3s, Argo CD, GitLab CI/CD, Key Vault i podejściem GitOps; monitoring usług i diagnozowanie problemów w Grafanie.",
+                    "Rozwój wybranych elementów głównego interfejsu aplikacji w Next.js oraz integracja frontendu z usługami backendowymi i rozwiązaniami AI.",
+                ],
+            },
+            {
                 company: "Iberion",
                 role: "Python / AI Engineer",
-                period: "Warszawa | Paź 2025 – obecnie",
+                period: "Warszawa | Paź 2025 – Kwi 2026",
                 startDate: "2025-10-01",
-                endDate: "9999-12-31",
+                endDate: "2026-04-30",
                 details: [
                     "Tworzenie systemów backendowych i automatyzacji w Pythonie.",
                     "Budowanie integracji pomiędzy narzędziami i zewnętrznymi usługami.",

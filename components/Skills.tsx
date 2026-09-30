@@ -23,6 +23,7 @@ export default function Skills() {
       { name: "SOAP / REST", icon: <span className="text-lg">🌐</span> },
       { name: "Microservices", icon: <span className="text-lg">⚙️</span> },
       { name: "Message Queues", icon: <SiRabbitmq size={24} color="#ff6600" /> },
+      { name: "Temporal", icon: <span className="text-lg">🔄</span> },
     ],
     Frontend: [
       { name: "Next.js", icon: <SiNextdotjs size={24} color="white" /> },
@@ -43,6 +44,8 @@ export default function Skills() {
       { name: "Gemini", icon: <span className="text-lg">✨</span> },
       { name: "Claude", icon: <span className="text-lg">💡</span> },
       { name: "Mistral", icon: <span className="text-lg">🌪️</span> },
+      { name: "LiteLLM", icon: <span className="text-lg">🚅</span> },
+      { name: "AI agents", icon: <span className="text-lg">🕹️</span> },
       { name: "Prompt engineering", icon: <span className="text-lg">📝</span> },
       { name: "Data classification & extraction", icon: <span className="text-lg">📊</span> },
     ],
@@ -50,6 +53,7 @@ export default function Skills() {
       { name: "PostgreSQL", icon: <SiPostgresql size={24} color="#336791" /> },
       { name: "Elasticsearch", icon: <SiElastic size={24} color="#005571" /> },
       { name: "Redis", icon: <SiRedis size={24} color="#d82c20" /> },
+      { name: "AlloyDB", icon: <span className="text-lg">🛢️</span> },
       { name: "SQL", icon: <span className="text-lg">🗄️</span> },
     ],
     DevOps: [
@@ -59,6 +63,11 @@ export default function Skills() {
       { name: "GitHub", icon: <SiGithub size={24} color="white" /> },
       { name: "Linux (terminal)", icon: <SiLinux size={24} color="#FCC624" /> },
       { name: "GitHub Actions", icon: <SiGithubactions size={24} color="#2088ff" /> },
+      { name: "K3s", icon: <span className="text-lg">☸️</span> },
+      { name: "Argo CD / GitOps", icon: <span className="text-lg">🐙</span> },
+      { name: "GitLab CI/CD", icon: <span className="text-lg">🦊</span> },
+      { name: "Key Vault", icon: <span className="text-lg">🔐</span> },
+      { name: "Grafana", icon: <span className="text-lg">📈</span> },
     ],
     Testing: [
       { name: "Unit testing", icon: <span className="text-lg">🧪</span> },
