@@ -3,17 +3,16 @@ export const translations = {
         greeting: "G'day, I'm",
         name: "Michał Białek,",
         role: "Software Engineer",
-        subtitle: "(Python Developer)",
-        description: `I specialize in Python development, building microservices,
-      integrating with language models, as well as process automation and web scraping.
-      I also work extensively with n8n, creating custom plugins, expanding the architecture
-      with new nodes, and improving existing solutions. Additionally, I support clients
-      during the planning stage of implementations and product development,
-      tailoring solutions to their needs and requirements.`,
+        subtitle: "(Mid Software Developer / AI Developer)",
+        description: `I specialize in Python, business process automation and AI-based solutions.
+      I design AI agents and workflows, integrate language models with existing systems,
+      and build backends, APIs and microservices. I currently work as a Mid Software Developer
+      on a platform that automates and scales business processes with AI. I care about AI solutions
+      that are reliable, production-ready and bring measurable business value.`,
         contact: "Contact me!",
 
         aboutTitle: "About Me",
-        aboutIntro: "I'm a Python developer with 3+ years of commercial experience, specialising in process automation, system integration, and AI-driven solutions. I work both at the architecture level and hands-on implementation — from designing microservices to shipping production-ready automation pipelines.",
+        aboutIntro: "I'm a Software Engineer specialising in Python, business process automation and AI-driven solutions, with 4 years of commercial experience in software development, system integration and automation (2+ years with Python). I combine language models, automation and classic software engineering to build systems that automate repetitive tasks and support complex business processes.",
         aboutApproach: "I value clean, maintainable code and real business impact. I enjoy projects where technology solves a concrete problem — not just because it can. I work closely with clients and teams throughout the whole product lifecycle, from planning to delivery.",
         aboutValues: [
             "Results-oriented — I focus on measurable outcomes, not just shipping features.",
@@ -22,7 +21,7 @@ export const translations = {
             "Reliable — I take ownership of my work and follow through.",
         ],
         aboutStats: [
-            { value: "3+", label: "Years of experience" },
+            { value: "4", label: "Years of experience" },
             { value: "6", label: "Companies" },
             { value: "10+", label: "Technologies" },
         ],
@@ -41,15 +40,15 @@ export const translations = {
         contactError: "Something went wrong. Please try again or email me directly.",
 
         portfolioTitle: "My Portfolio",
-        portfolioP1: `Greetings, I&apos;m Michał, a Python developer specializing in system
-          integration, automation, and workflow design. I build scalable services
-          and microservices with Python, create custom workflows in n8n,
-          and integrate advanced solutions such as Microsoft Graph API and
+        portfolioP1: `Greetings, I&apos;m Michał, a Software Engineer specializing in Python,
+          business process automation and AI. I design AI agents and workflows, build scalable
+          services and microservices with Python, create workflows in n8n,
+          and integrate advanced solutions such as Microsoft Graph API, Temporal and
           LLM-based automation.`,
         portfolioP2: `My background includes large-scale integration projects with IBM App
-          Connect Enterprise (ESQL), working with SOAP, REST, and queuing systems.
-          I&apos;m also experienced in databases (PostgreSQL, Elasticsearch,
-          Redis), Docker, and testing. I enjoy collaborating with teams and
+          Connect Enterprise (ESQL), working with SOAP, REST, and queuing systems (RabbitMQ).
+          I&apos;m also experienced in databases (PostgreSQL, AlloyDB, Elasticsearch,
+          Redis), Docker, K3s/GitOps, and testing. I enjoy collaborating with teams and
           clients to deliver robust, results-oriented solutions tailored to
           business needs.`,
 
@@ -209,16 +208,16 @@ export const translations = {
         greeting: "Cześć, jestem",
         name: "Michał Białek,",
         role: "Inżynier Oprogramowania",
-        subtitle: "(Python Developer)",
-        description: `Specjalizuję się w programowaniu w Pythonie, tworzeniu mikroserwisów,
-      integracji z modelami językowymi, a także w automatyzacji procesów i web scrapingu.
-      Pracuję także z n8n, tworząc własne wtyczki, rozwijając architekturę o nowe węzły
-      i usprawniając istniejące rozwiązania. Wspieram klientów podczas planowania wdrożeń
-      i rozwoju produktów, dostosowując rozwiązania do ich potrzeb.`,
+        subtitle: "(Mid Software Developer / AI Developer)",
+        description: `Specjalizuję się w Pythonie, automatyzacji procesów biznesowych i rozwiązaniach
+      opartych na AI. Projektuję agentów i workflow AI, integruję modele językowe z istniejącymi
+      systemami oraz tworzę backendy, API i mikroserwisy. Obecnie pracuję jako Mid Software Developer
+      przy platformie automatyzującej i skalującej procesy biznesowe z wykorzystaniem AI.
+      Zależy mi na rozwiązaniach AI, które są niezawodne, gotowe do produkcji i przynoszą mierzalną wartość biznesową.`,
         contact: "Skontaktuj się ze mną!",
 
         aboutTitle: "O mnie",
-        aboutIntro: "Jestem programistą Pythona z ponad 3-letnim doświadczeniem komercyjnym, specjalizującym się w automatyzacji procesów, integracji systemów i rozwiązaniach opartych na AI. Pracuję zarówno na poziomie architektury, jak i samej implementacji — od projektowania mikroserwisów po tworzenie gotowych do produkcji potoków automatyzacji.",
+        aboutIntro: "Jestem Software Engineerem specjalizującym się w Pythonie, automatyzacji procesów biznesowych i rozwiązaniach opartych na AI. Mam 4 lata komercyjnego doświadczenia w tworzeniu oprogramowania, integracji systemów i automatyzacji, w tym ponad 2 lata pracy z Pythonem. Łączę modele językowe, automatyzację i klasyczne podejście software engineeringowe, aby budować systemy, które automatyzują powtarzalne zadania i wspierają złożone procesy biznesowe.",
         aboutApproach: "Cenię czysty, łatwy w utrzymaniu kod i realny wpływ na biznes. Lubię projekty, w których technologia rozwiązuje konkretny problem — nie tylko 'bo można'. Ściśle współpracuję z klientami i zespołem przez cały cykl życia produktu — od planowania po wdrożenie.",
         aboutValues: [
             "Nastawienie na wyniki — skupiam się na mierzalnych efektach, nie tylko na dostarczaniu funkcji.",
@@ -227,7 +226,7 @@ export const translations = {
             "Niezawodność — biorę odpowiedzialność za swoją pracę i doprowadzam ją do końca.",
         ],
         aboutStats: [
-            { value: "3+", label: "Lata doświadczenia" },
+            { value: "4", label: "Lata doświadczenia" },
             { value: "6", label: "Firm" },
             { value: "10+", label: "Technologii" },
         ],
@@ -246,14 +245,13 @@ export const translations = {
         contactError: "Coś poszło nie tak. Spróbuj ponownie lub napisz bezpośrednio na email.",
 
         portfolioTitle: "Moje Portfolio",
-        portfolioP1: `Cześć, jestem Michał – programista Pythona specjalizujący się w
-      integracji systemów, automatyzacji i projektowaniu workflowów. Buduję skalowalne
-      usługi i mikroserwisy w Pythonie, tworzę niestandardowe przepływy w n8n
-      oraz integruję zaawansowane rozwiązania, takie jak Microsoft Graph API
-      i automatyzacje oparte na LLM.`,
+        portfolioP1: `Cześć, jestem Michał – Software Engineer specjalizujący się w Pythonie,
+      automatyzacji procesów biznesowych i AI. Projektuję agentów i workflow AI, buduję skalowalne
+      usługi i mikroserwisy w Pythonie, tworzę przepływy w n8n oraz integruję zaawansowane
+      rozwiązania, takie jak Microsoft Graph API, Temporal i automatyzacje oparte na LLM.`,
         portfolioP2: `Mam doświadczenie w dużych projektach integracyjnych z wykorzystaniem
-      IBM App Connect Enterprise (ESQL), pracy z SOAP, REST oraz systemami kolejkowymi.
-      Znam się również na bazach danych (PostgreSQL, Elasticsearch, Redis), Dockerze i testowaniu.
+      IBM App Connect Enterprise (ESQL), pracy z SOAP, REST oraz systemami kolejkowymi (RabbitMQ).
+      Znam się również na bazach danych (PostgreSQL, AlloyDB, Elasticsearch, Redis), Dockerze, K3s/GitOps i testowaniu.
       Lubię współpracować z zespołami i klientami, aby dostarczać solidne,
       skuteczne rozwiązania dopasowane do potrzeb biznesowych.`,
         workExpTitle: "Moje Doświadczenia Zawodowe",
