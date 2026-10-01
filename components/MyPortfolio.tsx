@@ -59,10 +59,10 @@ export default function MyProfile() {
 
           {/* Zdjęcie */}
           <Image
-            src="/linkedin_mb_cv-rmbg.png"
+            src="/linkedin_profile.jpg"
             alt="Michał Białek"
             fill
-            className="rounded-lg shadow-lg object-cover relative z-10"
+            className="rounded-lg shadow-lg object-cover object-[66%_45%] relative z-10"
           />
 
           {/* Ramka */}

@@ -13,11 +13,11 @@ export default function SideElements() {
         {/* Avatar */}
         <div className="mb-auto">
           <Image
-            src="/linkedin_mb_cv-rmbg.png"
+            src="/linkedin_profile.jpg"
             alt="Michał Białek"
             width={70}
             height={70}
-            className="rounded-full border-2 border-[#F8C471] shadow-md"
+            className="rounded-full border-2 border-[#F8C471] shadow-md object-cover object-[66%_45%] w-[70px] h-[70px]"
           />
         </div>
 
