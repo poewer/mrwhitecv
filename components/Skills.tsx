@@ -17,7 +17,7 @@ export default function Skills() {
     Backend: [
       { name: "Python", icon: <SiPython size={24} color="#3776ab" /> },
       { name: "Sanic", icon: <SiSanic size={24} color="#3776ab" /> },
-      { name: "Flask", icon: <SiFlask size={24} color="#ffffff" /> },
+      { name: "Flask", icon: <SiFlask size={24} color="currentColor" /> },
       { name: "Starlette", icon: <span className="text-lg">⭐</span> },
       { name: "Node.js", icon: <SiNodedotjs size={24} color="#68a063" /> },
       { name: "SOAP / REST", icon: <span className="text-lg">🌐</span> },
@@ -26,7 +26,7 @@ export default function Skills() {
       { name: "Temporal", icon: <span className="text-lg">🔄</span> },
     ],
     Frontend: [
-      { name: "Next.js", icon: <SiNextdotjs size={24} color="white" /> },
+      { name: "Next.js", icon: <SiNextdotjs size={24} color="currentColor" /> },
       { name: "JavaScript", icon: <SiJavascript size={24} color="#f7df1e" /> },
       { name: "React", icon: <SiReact size={24} color="#61dafb" /> },
       { name: "TypeScript", icon: <SiTypescript size={24} color="#3178c6" /> },
@@ -60,7 +60,7 @@ export default function Skills() {
       { name: "Docker", icon: <SiDocker size={24} color="#2496ed" /> },
       { name: "Kubernetes", icon: <SiKubernetes size={24} color="#326ce5" /> },
       { name: "Git", icon: <SiGit size={24} color="#f34f29" /> },
-      { name: "GitHub", icon: <SiGithub size={24} color="white" /> },
+      { name: "GitHub", icon: <SiGithub size={24} color="currentColor" /> },
       { name: "Linux (terminal)", icon: <SiLinux size={24} color="#FCC624" /> },
       { name: "GitHub Actions", icon: <SiGithubactions size={24} color="#2088ff" /> },
       { name: "K3s", icon: <span className="text-lg">☸️</span> },
@@ -85,9 +85,9 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-[#3C3B44] text-white flex flex-col items-center justify-center relative"
+      className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-s3 text-strong flex flex-col items-center justify-center relative"
     >
-      <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-10 sm:mb-16 text-center text-white/70">
+      <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-10 sm:mb-16 text-center text-strong/70">
         {t.skillsTitle}
       </h2>
 
@@ -97,9 +97,9 @@ export default function Skills() {
             key={category}
             className="flex flex-col md:flex-row items-start md:gap-16 gap-8 relative"
           >
-            <h3 className="text-xl sm:text-2xl md:text-2xl font-semibold text-white/70 uppercase tracking-wider mb-4 md:mb-0 w-full md:w-56">
+            <h3 className="text-xl sm:text-2xl md:text-2xl font-semibold text-strong/70 uppercase tracking-wider mb-4 md:mb-0 w-full md:w-56">
               {t.skillsCategories[category as keyof typeof t.skillsCategories] || category}
-              <div className="w-8 h-0.5 bg-[#F8C471] opacity-40 rounded-full mt-1" />
+              <div className="w-8 h-0.5 bg-accent opacity-40 rounded-full mt-1" />
             </h3>
 
             <motion.div
@@ -112,7 +112,7 @@ export default function Skills() {
               {items.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 text-base sm:text-lg hover:text-[#F8C471] transition cursor-pointer"
+                  className="flex items-center gap-3 text-base sm:text-lg hover:text-accent transition cursor-pointer"
                 >
                   {skill.icon}
                   <span>{skill.name}</span>

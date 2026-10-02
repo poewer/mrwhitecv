@@ -60,6 +60,7 @@ export const translations = {
                 period: "Warsaw (remote) | May 2026 – Present",
                 startDate: "2026-05-01",
                 endDate: "9999-12-31",
+                url: "https://www.linkedin.com/company/wenet-group/posts/?feedView=all",
                 details: [
                     "Developing a platform whose goal is to automate and scale business processes using AI, combining AI, backend, system integration, platform technologies and selected frontend elements.",
                     "Implementing LLM-based solutions, AI agents and intelligent workflows (LiteLLM), and using AI-assisted development tools such as Claude Code in daily work.",
@@ -77,6 +78,7 @@ export const translations = {
                 period: "Warsaw | Oct 2025 – Apr 2026",
                 startDate: "2025-10-01",
                 endDate: "2026-04-30",
+                url: "https://www.linkedin.com/company/grupaiberion/",
                 details: [
                     "Developed backend services and automation systems using Python.",
                     "Built integrations between various tools and external services.",
@@ -262,6 +264,7 @@ export const translations = {
                 period: "Warszawa (zdalnie) | Maj 2026 – obecnie",
                 startDate: "2026-05-01",
                 endDate: "9999-12-31",
+                url: "https://www.linkedin.com/company/wenet-group/posts/?feedView=all",
                 details: [
                     "Rozwój platformy, której celem jest automatyzacja i skalowanie procesów biznesowych z wykorzystaniem AI – praca z AI, backendem, integracją systemów, technologiami platformowymi i wybranymi elementami frontendu.",
                     "Implementacja rozwiązań z LLM, agentami AI i inteligentnymi workflow (LiteLLM) oraz wykorzystanie narzędzi AI-assisted development, takich jak Claude Code, w codziennej pracy.",
@@ -279,6 +282,7 @@ export const translations = {
                 period: "Warszawa | Paź 2025 – Kwi 2026",
                 startDate: "2025-10-01",
                 endDate: "2026-04-30",
+                url: "https://www.linkedin.com/company/grupaiberion/",
                 details: [
                     "Tworzenie systemów backendowych i automatyzacji w Pythonie.",
                     "Budowanie integracji pomiędzy narzędziami i zewnętrznymi usługami.",

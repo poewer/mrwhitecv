@@ -12,12 +12,12 @@ export default function Thesis() {
   return (
     <section
       id="thesis"
-      className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-[#37353E] text-[#D3DAD9] relative"
+      className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-s1 text-ink relative"
     >
       {/* Dekoracje */}
-      <div className="absolute top-12 right-16 w-3 h-3 rounded-full bg-[#F8C471] opacity-60" />
-      <div className="absolute bottom-24 left-20 w-4 h-4 border border-[#F8C471] rounded-full opacity-40" />
-      <div className="absolute top-1/3 right-10 w-2 h-12 bg-[#D3DAD9] opacity-20 rounded-full" />
+      <div className="absolute top-12 right-16 w-3 h-3 rounded-full bg-accent opacity-60" />
+      <div className="absolute bottom-24 left-20 w-4 h-4 border border-accent rounded-full opacity-40" />
+      <div className="absolute top-1/3 right-10 w-2 h-12 bg-ink opacity-20 rounded-full" />
 
       <div className="flex flex-col md:flex-row gap-10 md:gap-16">
         {/* Lewa kolumna — opis */}
@@ -28,10 +28,10 @@ export default function Thesis() {
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold text-[#F8C471]">{t.sectionTitle}</h2>
+          <h2 className="text-4xl font-bold text-accent">{t.sectionTitle}</h2>
 
-          <div className="space-y-1 text-sm text-gray-400">
-            <p><span className="text-[#F8C471]">{t.type}</span></p>
+          <div className="space-y-1 text-sm text-muted">
+            <p><span className="text-accent">{t.type}</span></p>
             <p>{t.faculty}</p>
             <p>{t.spec}</p>
             <p>{t.university}</p>
@@ -39,17 +39,17 @@ export default function Thesis() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-widest text-[#F8C471] mb-2">{t.titleLabel}</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-2">{t.titleLabel}</p>
             <p className="text-base leading-relaxed font-medium">{t.title}</p>
           </div>
 
           <div>
-            <p className="text-base leading-relaxed text-gray-300">{t.description}</p>
+            <p className="text-base leading-relaxed text-body">{t.description}</p>
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-widest text-[#F8C471] mb-2">{t.techLabel}</p>
-            <p className="text-sm text-gray-300">{t.tech}</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-2">{t.techLabel}</p>
+            <p className="text-sm text-body">{t.tech}</p>
           </div>
 
           <a
@@ -72,7 +72,7 @@ export default function Thesis() {
         >
           <iframe
             src={PDF_PATH}
-            className="w-full rounded-lg border border-gray-600 shadow-lg"
+            className="w-full rounded-lg border border-line shadow-lg"
             style={{ height: "90vh" }}
             title="Engineering Thesis PDF"
           />

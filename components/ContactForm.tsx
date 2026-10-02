@@ -36,16 +36,16 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-[#D3DAD9] placeholder-gray-500 focus:outline-none focus:border-[#F8C471] transition-colors";
+    "w-full bg-transparent border border-line rounded-lg px-4 py-3 text-ink placeholder:text-placeholder focus:outline-none focus:border-accent transition-colors";
 
   return (
     <section
       id="contact"
-      className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-[#37353E] text-[#D3DAD9] relative flex flex-col justify-center"
+      className="min-h-screen px-4 sm:px-8 md:px-20 py-16 sm:py-20 bg-s1 text-ink relative flex flex-col justify-center"
     >
       {/* Dekoracje */}
-      <div className="absolute top-16 left-1/3 w-2 h-2 rounded-full bg-[#F8C471] opacity-70" />
-      <div className="absolute bottom-20 right-1/4 w-3 h-3 border border-[#F8C471] rounded-full opacity-40" />
+      <div className="absolute top-16 left-1/3 w-2 h-2 rounded-full bg-accent opacity-70" />
+      <div className="absolute bottom-20 right-1/4 w-3 h-3 border border-accent rounded-full opacity-40" />
 
       <div className="max-w-2xl w-full mx-auto">
         <motion.div
@@ -54,12 +54,12 @@ export default function ContactForm() {
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold mb-3 text-[#F8C471]">{t.contactTitle}</h2>
-          <p className="text-gray-400 mb-10">{t.contactSubtitle}</p>
+          <h2 className="text-4xl font-bold mb-3 text-accent">{t.contactTitle}</h2>
+          <p className="text-muted mb-10">{t.contactSubtitle}</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">{t.contactName}</label>
+              <label className="block text-sm text-muted mb-1">{t.contactName}</label>
               <input
                 type="text"
                 name="name"
@@ -72,7 +72,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="block text-sm text-gray-400 mb-1">{t.contactEmail}</label>
+              <label className="block text-sm text-muted mb-1">{t.contactEmail}</label>
               <input
                 type="email"
                 name="email"
@@ -85,7 +85,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="block text-sm text-gray-400 mb-1">{t.contactMessage}</label>
+              <label className="block text-sm text-muted mb-1">{t.contactMessage}</label>
               <textarea
                 name="message"
                 required
@@ -100,7 +100,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full py-3 border-2 border-[#F8C471] text-[#F8C471] rounded-lg font-medium hover:bg-[#F8C471] hover:text-[#37353E] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+              className="w-full py-3 border-2 border-accent text-accent rounded-lg font-medium hover:bg-accent hover:text-s1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
               {status === "loading" ? t.contactSending : t.contactSend}
             </button>

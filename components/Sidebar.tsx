@@ -8,7 +8,7 @@ export default function SideElements() {
       {/* Lewy sidebar */}
       <div
         className="fixed left-0 top-0 h-screen w-20 hidden md:flex flex-col items-center py-6 shadow-md z-10"
-        style={{ backgroundColor: "#37353E" }}
+        style={{ backgroundColor: "var(--s1)" }}
       >
         {/* Avatar */}
         <div className="mb-auto">
@@ -17,7 +17,7 @@ export default function SideElements() {
             alt="Michał Białek"
             width={70}
             height={70}
-            className="rounded-full border-2 border-[#F8C471] shadow-md object-cover object-[66%_45%] w-[70px] h-[70px]"
+            className="rounded-full border-2 border-accent shadow-md object-cover object-[66%_45%] w-[70px] h-[70px]"
           />
         </div>
 
@@ -28,7 +28,7 @@ export default function SideElements() {
               href="https://github.com/poewer"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#D3DAD9] hover:text-[#F8C471] transition-colors duration-300"
+              className="text-ink hover:text-accent transition-colors duration-300"
             >
               <FaGithub size={22} />
             </Link>
@@ -37,7 +37,7 @@ export default function SideElements() {
               href="https://www.instagram.com/bial_y_czak/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#D3DAD9] hover:text-[#F8C471] transition-colors duration-300"
+              className="text-ink hover:text-accent transition-colors duration-300"
             >
               <FaInstagram size={22} />
             </Link>
@@ -46,14 +46,14 @@ export default function SideElements() {
               href="https://www.linkedin.com/in/michal-bialek-a48891267/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#D3DAD9] hover:text-[#F8C471] transition-colors duration-300"
+              className="text-ink hover:text-accent transition-colors duration-300"
             >
               <FaLinkedin size={22} />
             </Link>
           </div>
 
           {/* Pionowa linia */}
-          <div className="w-px h-20" style={{ backgroundColor: "#D3DAD9" }}></div>
+          <div className="w-px h-20" style={{ backgroundColor: "var(--ink)" }}></div>
         </div>
       </div>
     </>

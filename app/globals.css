@@ -1,22 +1,56 @@
 @import "tailwindcss";
 
+/* Domyślnie ciemny motyw; jasny włączany przez data-theme="light" na <html> */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --s1: #37353e;
+  --s2: #2e2d35;
+  --s3: #3c3b44;
+  --s4: #44444e;
+  --ink: #d3dad9;
+  --accent: #f8c471;
+  --body: #d1d5db;
+  --muted: #9ca3af;
+  --placeholder: #6b7280;
+  --line: #4b5563;
+  --strong: #ffffff;
+  --menu: #000000;
+
+  --background: var(--s1);
+  --foreground: var(--ink);
+}
+
+:root[data-theme="light"] {
+  --s1: #f5f2eb;
+  --s2: #ece7db;
+  --s3: #f0ece2;
+  --s4: #e6e0d2;
+  --ink: #2b2a33;
+  --accent: #a8680f;
+  --body: #3f3f46;
+  --muted: #5b6170;
+  --placeholder: #8a8f9b;
+  --line: #cfc8b8;
+  --strong: #1f1e24;
+  --menu: #f5f2eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-s1: var(--s1);
+  --color-s2: var(--s2);
+  --color-s3: var(--s3);
+  --color-s4: var(--s4);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-placeholder: var(--placeholder);
+  --color-line: var(--line);
+  --color-strong: var(--strong);
+  --color-menu: var(--menu);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
