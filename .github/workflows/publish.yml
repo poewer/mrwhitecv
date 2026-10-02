@@ -35,3 +35,60 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ env.REPO }}:latest
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+
+    env:
+      CONTAINER_NAME: nextjs-container
+      HOST_PORT: "40084"
+      # Plik ze zmiennymi środowiskowymi (np. SMTP) leży na serwerze, nie w repo
+      ENV_FILE: /home/mrwhitecv/.env
+
+    steps:
+      - name: downcase REPO
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+
+      - name: Deploy over SSH
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "${SSH_PORT:-22}" \
+            "${SSH_USER}@${SSH_HOST}" \
+            "IMAGE=ghcr.io/${REPO}:latest CONTAINER_NAME=${CONTAINER_NAME} HOST_PORT=${HOST_PORT} ENV_FILE=${ENV_FILE} bash -s" <<'EOF'
+          set -euo pipefail
+
+          # Nie ruszamy działającego kontenera, jeśli brakuje pliku ze zmiennymi
+          test -f "$ENV_FILE" || { echo "Brak $ENV_FILE na serwerze"; exit 1; }
+
+          docker pull "$IMAGE"
+
+          docker stop "$CONTAINER_NAME" || true
+          docker rm "$CONTAINER_NAME" || true
+
+          docker run -d --name "$CONTAINER_NAME" \
+            --restart unless-stopped \
+            -p "$HOST_PORT:3000" \
+            --env-file "$ENV_FILE" \
+            "$IMAGE"
+
+          docker image prune -f
+          docker ps --filter "name=$CONTAINER_NAME"
+          EOF
