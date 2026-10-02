@@ -10,6 +10,17 @@ export const translations = {
       on a platform that automates and scales business processes with AI. I care about AI solutions
       that are reliable, production-ready and bring measurable business value.`,
         contact: "Contact me!",
+        nav: {
+            myprofile: "Profile",
+            about: "About",
+            workexperience: "Experience",
+            skills: "Skills",
+            thesis: "Thesis",
+            n8ncourse: "n8n Course",
+            contact: "Contact",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+        },
 
         aboutTitle: "About Me",
         aboutIntro: "I'm a Software Engineer specialising in Python, business process automation and AI-driven solutions, with 4 years of commercial experience in software development, system integration and automation (2+ years with Python). I combine language models, automation and classic software engineering to build systems that automate repetitive tasks and support complex business processes.",
@@ -217,6 +228,17 @@ export const translations = {
       przy platformie automatyzującej i skalującej procesy biznesowe z wykorzystaniem AI.
       Zależy mi na rozwiązaniach AI, które są niezawodne, gotowe do produkcji i przynoszą mierzalną wartość biznesową.`,
         contact: "Skontaktuj się ze mną!",
+        nav: {
+            myprofile: "Profil",
+            about: "O mnie",
+            workexperience: "Doświadczenie",
+            skills: "Umiejętności",
+            thesis: "Praca inżynierska",
+            n8ncourse: "Kurs n8n",
+            contact: "Kontakt",
+            openMenu: "Otwórz menu",
+            closeMenu: "Zamknij menu",
+        },
 
         aboutTitle: "O mnie",
         aboutIntro: "Jestem Software Engineerem specjalizującym się w Pythonie, automatyzacji procesów biznesowych i rozwiązaniach opartych na AI. Mam 4 lata komercyjnego doświadczenia w tworzeniu oprogramowania, integracji systemów i automatyzacji, w tym ponad 2 lata pracy z Pythonem. Łączę modele językowe, automatyzację i klasyczne podejście software engineeringowe, aby budować systemy, które automatyzują powtarzalne zadania i wspierają złożone procesy biznesowe.",
