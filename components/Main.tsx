@@ -1,5 +1,6 @@
 "use client";
 import HeaderSection from "./HeaderSection";
+import ScrollHint from "./ScrollHint";
 import { translations } from "@/utils/translations";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -103,6 +104,8 @@ export default function Main() {
         className="absolute bottom-24 right-20 w-1 h-1 rounded-full opacity-40"
         style={{ backgroundColor: "#37353E" }}
       ></div>
+
+      <ScrollHint />
     </main>
   );
 }

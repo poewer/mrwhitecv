@@ -10,6 +10,7 @@ export const translations = {
       on a platform that automates and scales business processes with AI. I care about AI solutions
       that are reliable, production-ready and bring measurable business value.`,
         contact: "Contact me!",
+        scrollHint: "Scroll down",
         nav: {
             myprofile: "Profile",
             about: "About",
@@ -228,6 +229,7 @@ export const translations = {
       przy platformie automatyzującej i skalującej procesy biznesowe z wykorzystaniem AI.
       Zależy mi na rozwiązaniach AI, które są niezawodne, gotowe do produkcji i przynoszą mierzalną wartość biznesową.`,
         contact: "Skontaktuj się ze mną!",
+        scrollHint: "Przewiń w dół",
         nav: {
             myprofile: "Profil",
             about: "O mnie",
