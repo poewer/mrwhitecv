@@ -40,14 +40,14 @@ export const translations = {
         contactError: "Something went wrong. Please try again or email me directly.",
 
         portfolioTitle: "My Portfolio",
-        portfolioP1: `Greetings, I&apos;m Michał, a Software Engineer specializing in Python,
+        portfolioP1: `Greetings, I'm Michał, a Software Engineer specializing in Python,
           business process automation and AI. I design AI agents and workflows, build scalable
           services and microservices with Python, create workflows in n8n,
           and integrate advanced solutions such as Microsoft Graph API, Temporal and
           LLM-based automation.`,
         portfolioP2: `My background includes large-scale integration projects with IBM App
           Connect Enterprise (ESQL), working with SOAP, REST, and queuing systems (RabbitMQ).
-          I&apos;m also experienced in databases (PostgreSQL, AlloyDB, Elasticsearch,
+          I'm also experienced in databases (PostgreSQL, AlloyDB, Elasticsearch,
           Redis), Docker, K3s/GitOps, and testing. I enjoy collaborating with teams and
           clients to deliver robust, results-oriented solutions tailored to
           business needs.`,
