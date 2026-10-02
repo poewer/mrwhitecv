@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Domyślnie ciemny motyw; jasny włączany przez data-theme="light" na <html> */
+/* Paleta kolorów strony (motyw ciemny) */
 :root {
   --s1: #37353e;
   --s2: #2e2d35;
@@ -17,21 +17,6 @@
 
   --background: var(--s1);
   --foreground: var(--ink);
-}
-
-:root[data-theme="light"] {
-  --s1: #f5f2eb;
-  --s2: #ece7db;
-  --s3: #f0ece2;
-  --s4: #e6e0d2;
-  --ink: #2b2a33;
-  --accent: #a8680f;
-  --body: #3f3f46;
-  --muted: #5b6170;
-  --placeholder: #8a8f9b;
-  --line: #cfc8b8;
-  --strong: #1f1e24;
-  --menu: #f5f2eb;
 }
 
 @theme inline {

@@ -6,20 +6,6 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function HeaderSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { lang, toggleLanguage } = useLanguage();
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
-  }, []);
-
-  const toggleTheme = () => {
-    const next = theme === "light" ? "dark" : "light";
-    setTheme(next);
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("theme", next);
-    } catch (e) {}
-  };
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", isMenuOpen);
@@ -82,22 +68,6 @@ export default function HeaderSection() {
               <span role="img" aria-label="Polish flag">🇵🇱</span> PL
             </>
           )}
-        </button>
-
-        <button
-          onClick={toggleTheme}
-          aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-          title={theme === "light" ? "Dark mode" : "Light mode"}
-          className="setPointerOn flex items-center justify-center w-10 h-10 border-2 rounded text-base
-             transition-all duration-300 hover:bg-[#715A5A] hover:text-[#D3DAD9]
-             hover:scale-105 hover:shadow-lg"
-          style={{
-            borderColor: "#715A5A",
-            color: "#715A5A",
-            backgroundColor: "transparent",
-          }}
-        >
-          <span aria-hidden="true">{theme === "light" ? "🌙" : "☀️"}</span>
         </button>
 
       </div>
