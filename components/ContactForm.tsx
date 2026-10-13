@@ -51,8 +51,8 @@ export default function ContactForm() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0, margin: "0px 0px 20% 0px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <h2 className="text-4xl font-bold mb-3 text-accent">{t.contactTitle}</h2>
           <p className="text-muted mb-10">{t.contactSubtitle}</p>

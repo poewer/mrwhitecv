@@ -9,7 +9,7 @@
   --ink: #d3dad9;
   --accent: #f8c471;
   --body: #d1d5db;
-  --muted: #9ca3af;
+  --muted: #bcc3ce;
   --placeholder: #6b7280;
   --line: #4b5563;
   --strong: #ffffff;
@@ -42,8 +42,9 @@ html {
   scroll-behavior: smooth;
 }
 
-section[id] {
-  scroll-margin-top: 3.5rem;
+section[id],
+footer[id] {
+  scroll-margin-top: 4rem;
 }
 
 body {

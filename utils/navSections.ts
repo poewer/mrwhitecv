@@ -1,10 +1,8 @@
 export const NAV_SECTIONS = [
-  "myprofile",
   "about",
   "workexperience",
   "opensource",
   "skills",
-  "thesis",
-  "n8ncourse",
+  "education",
   "contact",
 ] as const;

@@ -33,6 +33,16 @@ export default function MobileMenu({ onClose }: { onClose: () => void }) {
         ))}
       </nav>
 
+      <a
+        href={`/${lang === "pl" ? "pl_michal_bialek_cv.pdf" : "en_michal_bialek_cv.pdf"}`}
+        download
+        className="mt-8 px-6 py-2 border-2 border-accent text-accent rounded-lg font-medium
+          hover:bg-accent hover:text-s1 transition-colors"
+        onClick={onClose}
+      >
+        ⬇ {t.nav.cv}
+      </a>
+
       <div className="w-16 h-px bg-line my-10" />
 
       <div className="flex flex-col space-y-8 text-lg">

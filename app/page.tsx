@@ -1,13 +1,11 @@
 import Sidebar from "@/components/Sidebar";
 import Main from "@/components/Main";
-import MyProfile from "@/components/MyPortfolio";
 import About from "@/components/About";
 import WorkExperience from "@/components/WorkExperience";
 import Skills from "@/components/Skills";
 import OpenSource from "@/components/OpenSource";
 import GitHubActivity from "@/components/GitHubActivity";
-import Thesis from "@/components/Thesis";
-import N8nCourse from "@/components/N8nCourse";
+import Education from "@/components/Education";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 
@@ -18,14 +16,11 @@ export default function Home() {
       <NavBar />
       <div className="ml-0 md:ml-20 overflow-x-hidden">
         <Main />
-        <MyProfile />
-        <About />
+        <About activity={<GitHubActivity />} />
         <WorkExperience />
         <OpenSource />
-        <GitHubActivity />
         <Skills />
-        <Thesis />
-        <N8nCourse />
+        <Education />
         <Footer />
       </div>
     </div>

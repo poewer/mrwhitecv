@@ -8,33 +8,28 @@ import { NAV_SECTIONS } from "@/utils/navSections";
 export default function NavBar() {
   const { lang, toggleLanguage } = useLanguage();
   const t = translations[lang];
-  const [visible, setVisible] = useState(false);
+  const cvFile = lang === "pl" ? "pl_michal_bialek_cv.pdf" : "en_michal_bialek_cv.pdf";
   const [active, setActive] = useState<string>("");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Pasek pojawia się po przewinięciu poza hero
+  // Podświetlana jest zawsze dokładnie jedna sekcja: ostatnia, której góra minęła próg (35% wysokości ekranu)
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > window.innerHeight * 0.6);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Podświetlenie aktualnej sekcji
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -55% 0px" }
-    );
-    NAV_SECTIONS.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    const update = () => {
+      const threshold = window.innerHeight * 0.35;
+      let current = "";
+      for (const id of NAV_SECTIONS) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= threshold) current = id;
+      }
+      setActive(current);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   useEffect(() => {
@@ -45,9 +40,8 @@ export default function NavBar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 md:left-20 right-0 z-30 h-14 bg-s1/90 backdrop-blur border-b border-line
-          flex items-center justify-between px-4 sm:px-6 transition-all duration-300
-          ${visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
+        className="fixed top-0 left-0 md:left-20 right-0 z-30 h-14 bg-s1/90 backdrop-blur border-b border-line
+          flex items-center justify-between px-4 sm:px-6"
       >
         {/* Burger (telefon) */}
         <button
@@ -74,6 +68,17 @@ export default function NavBar() {
           ))}
         </nav>
 
+        <div className="flex items-center gap-2">
+        <a
+          href={`/${cvFile}`}
+          download={cvFile}
+          className="px-3 py-1.5 border border-accent text-accent rounded text-xs sm:text-sm font-medium
+            hover:bg-accent hover:text-s1 transition-colors duration-200"
+        >
+          <span aria-hidden="true">⬇ </span>
+          {t.nav.cv}
+        </a>
+
         <button
           onClick={toggleLanguage}
           className="cursor-pointer px-3 py-1.5 border border-line rounded text-xs sm:text-sm text-ink
@@ -81,6 +86,7 @@ export default function NavBar() {
         >
           {lang === "pl" ? "🇬🇧 EN" : "🇵🇱 PL"}
         </button>
+        </div>
       </header>
 
       {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}

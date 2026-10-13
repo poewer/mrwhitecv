@@ -1,43 +1,36 @@
 export const translations = {
     en: {
-        greeting: "G'day, I'm",
+        greeting: "Hi, I'm",
         name: "Michał Białek,",
-        role: "Software Engineer",
-        subtitle: "(Mid Software Developer / AI Developer)",
-        description: `I specialize in Python, business process automation and AI-based solutions.
-      I design AI agents and workflows, integrate language models with existing systems,
-      and build backends, APIs and microservices. I currently work as a Mid Software Developer
-      on a platform that automates and scales business processes with AI. I care about AI solutions
-      that are reliable, production-ready and bring measurable business value.`,
+        role: "Python & AI Engineer",
+        subtitle: "",
+        description: `I design AI agents and workflows, integrate language models with existing systems and build backends and APIs in Python. Currently I work on a platform that automates and scales business processes with AI.`,
         contact: "Contact me!",
         scrollHint: "Scroll down",
         nav: {
-            myprofile: "Profile",
             about: "About",
             workexperience: "Experience",
             skills: "Skills",
             opensource: "Open Source",
-            thesis: "Thesis",
-            n8ncourse: "n8n Course",
+            education: "Education",
             contact: "Contact",
+            cv: "CV",
             openMenu: "Open menu",
             closeMenu: "Close menu",
         },
 
         aboutTitle: "About Me",
-        aboutIntro: "I'm a Software Engineer specialising in Python, business process automation and AI-driven solutions, with 4 years of commercial experience in software development, system integration and automation (2+ years with Python). I combine language models, automation and classic software engineering to build systems that automate repetitive tasks and support complex business processes.",
+        aboutIntro: "I'm a Software Engineer specializing in Python, business process automation and AI-driven solutions, with 4 years of commercial experience in software development, system integration and automation (2+ years with Python). I combine language models, automation and classic software engineering to build systems that automate repetitive tasks and support complex business processes. My background includes large-scale integration projects with IBM App Connect Enterprise, SOAP, REST and message queues.",
         aboutApproach: "I value clean, maintainable code and real business impact. I enjoy projects where technology solves a concrete problem — not just because it can. I work closely with clients and teams throughout the whole product lifecycle, from planning to delivery. Outside of work I lead WorthMyTime — an open source team project building a financial application with the help of AI — where I design the architecture and work with contributors across backend, frontend and infrastructure.",
         aboutValues: [
-            "Results-oriented — I focus on measurable outcomes, not just shipping features.",
-            "Collaborative — I communicate proactively and adapt to the team's workflow.",
-            "Curious — I stay up to date with AI/LLM tooling and apply it where it actually helps.",
-            "Reliable — I take ownership of my work and follow through.",
-            "Open source — I run WorthMyTime, a public team project, and enjoy building software in the open together with other developers.",
+            "Impact over output — I scaled a content-generation pipeline from ~100 to ~300 documents per day.",
+            "Production mindset — I ship services through DEV → TEST → PROD with CI/CD, monitoring and tests.",
+            "Hands-on with AI — LLM agents, computer vision and vector search used in real workflows, not just demos.",
         ],
         aboutStats: [
             { value: "4", label: "Years of experience" },
-            { value: "6", label: "Companies" },
-            { value: "10+", label: "Technologies" },
+            { value: "2+", label: "Years with Python" },
+            { value: "40+", label: "Technologies" },
         ],
 
         contactTitle: "Get In Touch",
@@ -53,20 +46,11 @@ export const translations = {
         contactSuccess: "Message sent! I'll get back to you soon.",
         contactError: "Something went wrong. Please try again or email me directly.",
 
-        portfolioTitle: "My Portfolio",
-        portfolioP1: `Greetings, I'm Michał, a Software Engineer specializing in Python,
-          business process automation and AI. I design AI agents and workflows, build scalable
-          services and microservices with Python, create workflows in n8n,
-          and integrate advanced solutions such as Microsoft Graph API, Temporal and
-          LLM-based automation.`,
-        portfolioP2: `My background includes large-scale integration projects with IBM App
-          Connect Enterprise (ESQL), working with SOAP, REST, and queuing systems (RabbitMQ).
-          I'm also experienced in databases (PostgreSQL, AlloyDB, Elasticsearch,
-          Redis), Docker, K3s/GitOps, and testing. I enjoy collaborating with teams and
-          clients to deliver robust, results-oriented solutions tailored to
-          business needs.`,
 
         workExpTitle: "My Work Experiences",
+
+
+        experienceNav: { prev: "Earlier position", next: "Later position" },
         experiences: [
             {
                 company: "WeNet Group S.A.",
@@ -76,11 +60,11 @@ export const translations = {
                 endDate: "9999-12-31",
                 url: "https://www.linkedin.com/company/wenet-group/posts/?feedView=all",
                 details: [
-                    "Developing a platform whose goal is to automate and scale business processes using AI, combining AI, backend, system integration, platform technologies and selected frontend elements.",
+                    "Building an AI platform that automates business processes end-to-end — from LLM agents and backend services to the user interface.",
                     "Implementing LLM-based solutions, AI agents and intelligent workflows (LiteLLM), and using AI-assisted development tools such as Claude Code in daily work.",
                     "Building APIs, services and microservices in Python with PostgreSQL, AlloyDB, RabbitMQ and asynchronous processing.",
                     "Implementing asynchronous, distributed workflows with Temporal and RabbitMQ.",
-                    "Co-creating shared, reusable solutions used by other teams, including authentication mechanisms, reusable services, APIs and microservices.",
+                    "Co-creating shared components used by other teams: authentication, common services, APIs and microservices.",
                     "Integrating services and components delivered by multiple development teams into the main product.",
                     "Working with containerized applications and K3s, Argo CD, GitLab CI/CD, Key Vault and GitOps; monitoring services and diagnosing issues with Grafana.",
                     "Developing selected parts of the main application interface in Next.js and integrating the frontend with backend and AI services.",
@@ -144,7 +128,7 @@ export const translations = {
                     "Processed and transformed complex data structures using XML and XSD schemas.",
                     "Conducted debugging sessions and ensured quality of integration solutions through testing.",
                     "Participated in architectural reviews and contributed to technical documentation.",
-                    "Coordinated with cross-functional teams using Git and Scrum methodology.",
+                    "Coordinated with cross-functional teams in a Scrum process.",
                 ],
             },
             {
@@ -173,16 +157,20 @@ export const translations = {
                     "Developed and maintained flows in IBM App Connect Enterprise Toolkit 12 (ESQL).",
                     "Built integrations based on SOAP, REST, and queuing systems.",
                     "Worked extensively with XML/XSD for data transformations.",
-                    "Debugged and tested scalable integration flows.",
+                    "Debugged and tested integration flows.",
                     "Collaborated with architects, prepared documentation, and implemented performance and security best practices.",
                     "Worked with Git in a Scrum team and communicated directly with clients.",
                 ],
             },
         ],
 
+        educationTitle: "Education & Courses",
         n8nSection: {
             sectionTitle: "n8n Course",
             subtitle: "Introduction to workflow automation",
+            summary: "Course on workflow automation with n8n, an open-source low-code platform for building integrations and data flows visually. It shows how to cut manual work and human errors using REST APIs, webhooks and HTTP nodes.",
+            readMore: "Read more",
+            readLess: "Show less",
             description: `Modern businesses operate in an ecosystem of thousands of applications that process enormous amounts of data daily. Many of these systems work independently and require manual data transfer or repetitive tasks performed by employees — creating a clear need for integration and automation tools.\n\nn8n (pronounced "en-eight-en") is a low-code platform for building integration processes and data flows visually. Unlike closed tools such as Zapier, Make, or Microsoft Power Automate, n8n is open-source — giving full control over data, business logic, and the runtime environment. It can be self-hosted, deployed in a private cloud, or used as SaaS.\n\nAutomating with n8n leads to shorter execution times for repetitive processes, fewer human errors, better information flow between systems, and the ability to experiment quickly with process logic without involving developers.`,
             techLabel: "Technologies covered",
             tech: "n8n, REST APIs, Webhooks, JavaScript, HTTP nodes, integrations",
@@ -242,50 +230,44 @@ export const translations = {
         },
         footerGetInTouch: "Get in touch",
         footerTitle: "Let’s Work Together",
-        footerDescription: `I’m open for new opportunities – especially ambitious or large projects.
-    However, my inbox is always open. Whether you have a question or just
-    want to say hi, I’ll try my best to get back to you!`,
+        footerDescription: `Looking for a Python / AI engineer, or have an idea worth automating? Drop me a line.`,
         footerButton: "Say Hello",
+        footerCopy: "Copy address",
+        footerCopied: "Copied!",
+        footerRights: "All rights reserved.",
     },
     pl: {
         greeting: "Cześć, jestem",
         name: "Michał Białek,",
-        role: "Inżynier Oprogramowania",
-        subtitle: "(Mid Software Developer / AI Developer)",
-        description: `Specjalizuję się w Pythonie, automatyzacji procesów biznesowych i rozwiązaniach
-      opartych na AI. Projektuję agentów i workflow AI, integruję modele językowe z istniejącymi
-      systemami oraz tworzę backendy, API i mikroserwisy. Obecnie pracuję jako Mid Software Developer
-      przy platformie automatyzującej i skalującej procesy biznesowe z wykorzystaniem AI.
-      Zależy mi na rozwiązaniach AI, które są niezawodne, gotowe do produkcji i przynoszą mierzalną wartość biznesową.`,
+        role: "Inżynier Python i AI",
+        subtitle: "",
+        description: `Projektuję agentów i workflow AI, integruję modele językowe z istniejącymi systemami oraz tworzę backendy i API w Pythonie. Obecnie pracuję przy platformie, która z pomocą AI automatyzuje i skaluje procesy biznesowe.`,
         contact: "Skontaktuj się ze mną!",
         scrollHint: "Przewiń w dół",
         nav: {
-            myprofile: "Profil",
             about: "O mnie",
             workexperience: "Doświadczenie",
             skills: "Umiejętności",
             opensource: "Open Source",
-            thesis: "Praca inżynierska",
-            n8ncourse: "Kurs n8n",
+            education: "Edukacja",
             contact: "Kontakt",
+            cv: "CV",
             openMenu: "Otwórz menu",
             closeMenu: "Zamknij menu",
         },
 
         aboutTitle: "O mnie",
-        aboutIntro: "Jestem Software Engineerem specjalizującym się w Pythonie, automatyzacji procesów biznesowych i rozwiązaniach opartych na AI. Mam 4 lata komercyjnego doświadczenia w tworzeniu oprogramowania, integracji systemów i automatyzacji, w tym ponad 2 lata pracy z Pythonem. Łączę modele językowe, automatyzację i klasyczne podejście software engineeringowe, aby budować systemy, które automatyzują powtarzalne zadania i wspierają złożone procesy biznesowe.",
+        aboutIntro: "Jestem Software Engineerem specjalizującym się w Pythonie, automatyzacji procesów biznesowych i rozwiązaniach opartych na AI. Mam 4 lata komercyjnego doświadczenia w tworzeniu oprogramowania, integracji systemów i automatyzacji, w tym ponad 2 lata pracy z Pythonem. Łączę modele językowe, automatyzację i klasyczne podejście software engineeringowe, aby budować systemy, które automatyzują powtarzalne zadania i wspierają złożone procesy biznesowe. Mam też doświadczenie w dużych projektach integracyjnych z IBM App Connect Enterprise, SOAP, REST i systemami kolejkowymi.",
         aboutApproach: "Cenię czysty, łatwy w utrzymaniu kod i realny wpływ na biznes. Lubię projekty, w których technologia rozwiązuje konkretny problem — nie tylko 'bo można'. Ściśle współpracuję z klientami i zespołem przez cały cykl życia produktu — od planowania po wdrożenie. Poza pracą prowadzę WorthMyTime — otwarty projekt zespołowy, w którym z pomocą AI budujemy aplikację finansową — gdzie projektuję architekturę i współpracuję z kontrybutorami przy backendzie, frontendzie i infrastrukturze.",
         aboutValues: [
-            "Nastawienie na wyniki — skupiam się na mierzalnych efektach, nie tylko na dostarczaniu funkcji.",
-            "Współpraca — komunikuję się proaktywnie i dopasowuję do stylu pracy zespołu.",
-            "Ciekawość — śledzę nowinki w świecie AI/LLM i stosuję je tam, gdzie naprawdę pomagają.",
-            "Niezawodność — biorę odpowiedzialność za swoją pracę i doprowadzam ją do końca.",
-            "Open source — prowadzę WorthMyTime, publiczny projekt zespołowy, i lubię tworzyć oprogramowanie otwarcie, razem z innymi programistami.",
+            "Efekt ponad aktywność — rozwinąłem pipeline generowania treści z ~100 do ~300 dokumentów dziennie.",
+            "Podejście produkcyjne — wdrażam usługi przez środowiska DEV → TEST → PROD z CI/CD, monitoringiem i testami.",
+            "AI w praktyce — agenci LLM, computer vision i wyszukiwanie wektorowe w prawdziwych procesach, nie tylko w demach.",
         ],
         aboutStats: [
             { value: "4", label: "Lata doświadczenia" },
-            { value: "6", label: "Firm" },
-            { value: "10+", label: "Technologii" },
+            { value: "2+", label: "Lata z Pythonem" },
+            { value: "40+", label: "Technologii" },
         ],
 
         contactTitle: "Skontaktuj się",
@@ -301,17 +283,9 @@ export const translations = {
         contactSuccess: "Wiadomość wysłana! Odezwę się wkrótce.",
         contactError: "Coś poszło nie tak. Spróbuj ponownie lub napisz bezpośrednio na email.",
 
-        portfolioTitle: "Moje Portfolio",
-        portfolioP1: `Cześć, jestem Michał – Software Engineer specjalizujący się w Pythonie,
-      automatyzacji procesów biznesowych i AI. Projektuję agentów i workflow AI, buduję skalowalne
-      usługi i mikroserwisy w Pythonie, tworzę przepływy w n8n oraz integruję zaawansowane
-      rozwiązania, takie jak Microsoft Graph API, Temporal i automatyzacje oparte na LLM.`,
-        portfolioP2: `Mam doświadczenie w dużych projektach integracyjnych z wykorzystaniem
-      IBM App Connect Enterprise (ESQL), pracy z SOAP, REST oraz systemami kolejkowymi (RabbitMQ).
-      Znam się również na bazach danych (PostgreSQL, AlloyDB, Elasticsearch, Redis), Dockerze, K3s/GitOps i testowaniu.
-      Lubię współpracować z zespołami i klientami, aby dostarczać solidne,
-      skuteczne rozwiązania dopasowane do potrzeb biznesowych.`,
         workExpTitle: "Moje Doświadczenia Zawodowe",
+
+        experienceNav: { prev: "Wcześniejsze stanowisko", next: "Późniejsze stanowisko" },
         experiences: [
             {
                 company: "WeNet Group S.A.",
@@ -321,11 +295,11 @@ export const translations = {
                 endDate: "9999-12-31",
                 url: "https://www.linkedin.com/company/wenet-group/posts/?feedView=all",
                 details: [
-                    "Rozwój platformy, której celem jest automatyzacja i skalowanie procesów biznesowych z wykorzystaniem AI – praca z AI, backendem, integracją systemów, technologiami platformowymi i wybranymi elementami frontendu.",
+                    "Budowa platformy AI, która automatyzuje procesy biznesowe od początku do końca — od agentów LLM i usług backendowych po interfejs użytkownika.",
                     "Implementacja rozwiązań z LLM, agentami AI i inteligentnymi workflow (LiteLLM) oraz wykorzystanie narzędzi AI-assisted development, takich jak Claude Code, w codziennej pracy.",
                     "Rozwój API, usług i mikroserwisów w Pythonie z PostgreSQL, AlloyDB, RabbitMQ i przetwarzaniem asynchronicznym.",
                     "Implementacja asynchronicznych i rozproszonych workflow z wykorzystaniem Temporal oraz RabbitMQ.",
-                    "Współtworzenie wspólnych, reużywalnych rozwiązań wykorzystywanych przez inne zespoły, m.in. mechanizmów autentykacji, reużywalnych usług, API i mikroserwisów.",
+                    "Współtworzenie wspólnych komponentów używanych przez inne zespoły: uwierzytelniania, usług, API i mikroserwisów.",
                     "Integracja usług i komponentów dostarczanych przez wiele zespołów developerskich z głównym produktem.",
                     "Praca z aplikacjami konteneryzowanymi oraz K3s, Argo CD, GitLab CI/CD, Key Vault i podejściem GitOps; monitoring usług i diagnozowanie problemów w Grafanie.",
                     "Rozwój wybranych elementów głównego interfejsu aplikacji w Next.js oraz integracja frontendu z usługami backendowymi i rozwiązaniami AI.",
@@ -389,7 +363,7 @@ export const translations = {
                     "Przetwarzanie i transformacja złożonych struktur danych z wykorzystaniem XML i schematów XSD.",
                     "Przeprowadzanie sesji debugowania oraz zapewnienie jakości rozwiązań integracyjnych poprzez testy.",
                     "Udział w przeglądach architektonicznych oraz tworzenie dokumentacji technicznej.",
-                    "Koordynacja pracy z zespołami interdyscyplinarnymi przy użyciu Gita i metodologii Scrum.",
+                    "Koordynacja pracy z zespołami interdyscyplinarnymi w procesie Scrum.",
                 ],
             },
             {
@@ -418,15 +392,19 @@ export const translations = {
                     "Tworzenie i utrzymywanie przepływów w IBM App Connect Enterprise Toolkit 12 (ESQL).",
                     "Budowanie integracji opartych na SOAP, REST oraz systemach kolejkowych.",
                     "Intensywna praca z XML/XSD przy transformacjach danych.",
-                    "Debugowanie i testowanie skalowalnych przepływów integracyjnych.",
+                    "Debugowanie i testowanie przepływów integracyjnych.",
                     "Współpraca z architektami, przygotowywanie dokumentacji oraz wdrażanie dobrych praktyk w zakresie wydajności i bezpieczeństwa.",
                     "Praca z Gitem w zespole Scrum oraz bezpośrednia komunikacja z klientami.",
                 ],
             },
         ],
+        educationTitle: "Edukacja i kursy",
         n8nSection: {
             sectionTitle: "Kurs n8n",
             subtitle: "Wprowadzenie do automatyzacji przepływów",
+            summary: "Kurs automatyzacji przepływów w n8n, otwartoźródłowej platformie low-code do wizualnego budowania integracji i przepływów danych. Pokazuje, jak ograniczyć pracę ręczną i błędy dzięki REST API, webhookom i węzłom HTTP.",
+            readMore: "Czytaj więcej",
+            readLess: "Pokaż mniej",
             description: `Współczesne przedsiębiorstwa funkcjonują w ekosystemie tysięcy aplikacji, które codziennie przetwarzają ogromne ilości danych. Wiele z tych systemów działa niezależnie i wymaga ręcznego przenoszenia informacji lub powtarzalnych działań wykonywanych przez pracowników — stąd potrzeba narzędzi do integracji i automatyzacji.\n\nn8n (czyt. en-eight-en) jest platformą low-code, umożliwiającą budowanie procesów integracyjnych i przepływów danych w sposób wizualny. W odróżnieniu od zamkniętych narzędzi, takich jak Zapier, Make czy Microsoft Power Automate, n8n jest oprogramowaniem open-source, co daje pełną kontrolę nad danymi, logiką biznesową i środowiskiem uruchomieniowym. Można je zainstalować lokalnie, w chmurze prywatnej lub korzystać z wersji SaaS.\n\nAutomatyzacja przy użyciu n8n prowadzi do skrócenia czasu wykonywania procesów powtarzalnych, zmniejszenia liczby błędów ludzkich, lepszego przepływu informacji między systemami oraz możliwości szybkiego eksperymentowania z logiką procesów bez angażowania programistów.`,
             techLabel: "Omawiane technologie",
             tech: "n8n, REST API, Webhooki, JavaScript, węzły HTTP, integracje",
@@ -487,10 +465,10 @@ export const translations = {
 
         footerGetInTouch: "Skontaktuj się",
         footerTitle: "Współpracujmy razem",
-        footerDescription: `Jestem otwarty na nowe możliwości – szczególnie ambitne i duże projekty.
-    Moja skrzynka pocztowa jest zawsze otwarta. Niezależnie od tego,
-    czy masz pytanie, czy chcesz się po prostu przywitać, postaram się
-    odpowiedzieć jak najszybciej!`,
+        footerDescription: `Szukasz inżyniera Python / AI albo masz pomysł wart zautomatyzowania? Napisz do mnie.`,
         footerButton: "Napisz do mnie",
+        footerCopy: "Kopiuj adres",
+        footerCopied: "Skopiowano!",
+        footerRights: "Wszelkie prawa zastrzeżone.",
     },
 };

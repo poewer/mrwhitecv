@@ -18,19 +18,19 @@ export default function ScrollHint() {
 
   return (
     <a
-      href="#myprofile"
+      href="#about"
       aria-label={t.scrollHint}
       className={`absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2
-        text-[#715A5A] transition-opacity duration-500 hover:opacity-100
+        text-accent transition-opacity duration-500 hover:opacity-100
         ${hidden ? "opacity-0 pointer-events-none" : "opacity-80"}`}
     >
       <span className="text-xs sm:text-sm font-medium tracking-widest uppercase">{t.scrollHint}</span>
 
       {/* Mysz z kółkiem i pulsującym pierścieniem */}
       <span className="relative flex items-center justify-center">
-        <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full border-2 border-[#715A5A] opacity-30" />
-        <span className="relative flex h-10 w-6 sm:h-12 sm:w-7 justify-center rounded-full border-2 border-[#715A5A] pt-2">
-          <span className="motion-safe:animate-bounce block h-2 w-1 rounded-full bg-[#715A5A]" />
+        <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full border-2 border-accent opacity-30" />
+        <span className="relative flex h-10 w-6 sm:h-12 sm:w-7 justify-center rounded-full border-2 border-accent pt-2">
+          <span className="motion-safe:animate-bounce block h-2 w-1 rounded-full bg-accent" />
         </span>
       </span>
 

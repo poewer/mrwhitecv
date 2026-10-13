@@ -27,8 +27,8 @@ export default function OpenSource() {
         className="flex flex-col md:flex-row gap-8 md:gap-12 items-start max-w-5xl"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0, margin: "0px 0px 20% 0px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       >
         {/* Logo projektu */}
         <a

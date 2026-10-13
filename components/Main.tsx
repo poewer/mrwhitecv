@@ -1,5 +1,4 @@
 "use client";
-import HeaderSection from "./HeaderSection";
 import ScrollHint from "./ScrollHint";
 import { translations } from "@/utils/translations";
 import { useLanguage } from "@/context/LanguageContext";
@@ -9,101 +8,53 @@ export default function Main() {
   const t = translations[lang];
 
   return (
-    <main
-      className="pl-4 md:pl-16 flex flex-col items-start justify-center min-h-screen relative overflow-hidden w-full"
-      style={{ backgroundColor: "#D3DAD9" }}
-    >
-      {/* Organiczne kształty w tle */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Duży żółty kształt */}
+    <main className="pl-4 md:pl-16 pt-14 flex flex-col items-start justify-center min-h-screen relative overflow-hidden w-full bg-s1 text-ink">
+      {/* Organiczne kształty w tle (akcent z niską przezroczystością) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute -top-20 -left-32 w-72 h-72 md:w-96 md:h-96 rounded-full opacity-90"
-          style={{
-            backgroundColor: "#F4D03F",
-            clipPath: "ellipse(70% 60% at 30% 40%)",
-            transform: "rotate(-15deg)",
-          }}
-        ></div>
-
-        {/* Średni kształt */}
+          className="absolute -top-20 -left-32 w-72 h-72 md:w-96 md:h-96 rounded-full bg-accent opacity-[0.14]"
+          style={{ clipPath: "ellipse(70% 60% at 30% 40%)", transform: "rotate(-15deg)" }}
+        />
         <div
-          className="absolute top-20 left-10 w-48 h-48 md:w-64 md:h-64 rounded-full opacity-80"
-          style={{
-            backgroundColor: "#F7DC6F",
-            clipPath: "ellipse(80% 50% at 60% 30%)",
-            transform: "rotate(25deg)",
-          }}
-        ></div>
-
-        {/* Dodatkowy kształt w prawym górnym rogu */}
+          className="absolute top-20 left-10 w-48 h-48 md:w-64 md:h-64 rounded-full bg-accent opacity-[0.10]"
+          style={{ clipPath: "ellipse(80% 50% at 60% 30%)", transform: "rotate(25deg)" }}
+        />
         <div
-          className="absolute -top-10 right-0 w-32 h-32 md:w-48 md:h-48 opacity-70"
-          style={{
-            backgroundColor: "#F8C471",
-            clipPath: "ellipse(60% 80% at 80% 20%)",
-            borderRadius: "50%",
-          }}
-        ></div>
+          className="absolute -top-10 right-0 w-32 h-32 md:w-48 md:h-48 bg-accent opacity-[0.12]"
+          style={{ clipPath: "ellipse(60% 80% at 80% 20%)", borderRadius: "50%" }}
+        />
       </div>
-
-      {/* Sekcja nagłówkowa */}
-      <HeaderSection />
 
       {/* Główna zawartość */}
       <div className="relative z-10 p-6 md:p-12 max-w-3xl md:max-w-4xl">
-        <h1
-          className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight"
-          style={{ color: "#37353E" }}
-        >
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-strong">
           {t.greeting} <br />
           <span className="block">{t.name}</span>
         </h1>
 
-        <h2
-          className="mt-4 sm:mt-6 text-xl sm:text-2xl font-semibold"
-          style={{ color: "#E74C3C" }}
-        >
+        <h2 className="mt-4 sm:mt-6 text-xl sm:text-2xl font-semibold text-accent">
           {t.role}
-          <span
-            className="inline-block ml-2 text-sm sm:text-base md:text-lg"
-            style={{
-              color: "#E74C3C",
-              fontFamily: "monospace",
-              letterSpacing: "2px",
-            }}
-          >
-            {t.subtitle}
-          </span>
+          {t.subtitle && (
+            <span
+              className="inline-block ml-2 text-sm sm:text-base md:text-lg"
+              style={{ fontFamily: "monospace", letterSpacing: "2px" }}
+            >
+              {t.subtitle}
+            </span>
+          )}
         </h2>
 
-        <p
-          className="mt-6 sm:mt-8 text-base sm:text-lg leading-relaxed"
-          style={{ color: "#44444E" }}
-        >
-          {t.description}
-        </p>
+        <p className="mt-6 sm:mt-8 text-base sm:text-lg leading-relaxed text-body">{t.description}</p>
 
-        <button
-          className="mt-8 sm:mt-10 px-6 sm:px-8 py-2 sm:py-3 border-2 rounded text-base sm:text-lg font-medium transition-all duration-300 hover:bg-[#715A5A] hover:text-[#D3DAD9] hover:scale-105 hover:shadow-lg"
-          style={{
-            borderColor: "#715A5A",
-            color: "#715A5A",
-            backgroundColor: "transparent",
-          }}
+        <a
+          href="#contact"
+          className="inline-block mt-8 sm:mt-10 px-6 sm:px-8 py-2 sm:py-3 border-2 border-accent text-accent rounded
+            text-base sm:text-lg font-medium transition-all duration-300
+            hover:bg-accent hover:text-s1 hover:scale-105 hover:shadow-lg"
         >
-          <a href="mailto:michal.bialek@opoczta.pl">{t.contact}</a>
-        </button>
+          {t.contact}
+        </a>
       </div>
-
-      {/* Dodatkowe efekty wizualne */}
-      <div
-        className="absolute bottom-16 right-10 w-2 h-2 rounded-full opacity-60"
-        style={{ backgroundColor: "#E74C3C" }}
-      ></div>
-      <div
-        className="absolute bottom-24 right-20 w-1 h-1 rounded-full opacity-40"
-        style={{ backgroundColor: "#37353E" }}
-      ></div>
 
       <ScrollHint />
     </main>

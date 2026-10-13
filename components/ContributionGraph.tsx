@@ -7,6 +7,9 @@ import { translations } from "@/utils/translations";
 
 export type Contribution = { date: string; count: number; level: 0 | 1 | 2 | 3 | 4 };
 
+// Odstęp między kwadracikami (rozmiar kwadracików wynika z szerokości kontenera)
+const GAP = 2;
+
 const LEVEL_CLASSES = [
   "bg-s4",
   "bg-accent/30",
@@ -67,21 +70,17 @@ export default function ContributionGraph({ user, total, contributions }: Props)
   };
 
   return (
-    <section
-      id="github"
-      className="px-4 sm:px-8 md:px-20 pb-16 sm:pb-20 pt-0 bg-s2 text-ink relative"
-    >
+    <div id="github" className="w-full text-ink">
       <motion.div
-        className="max-w-5xl"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0, margin: "0px 0px 20% 0px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <div className="border-t border-line pt-10">
+        <div className="border-t border-line pt-8">
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-5">
-            <h3 className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
-              <FaGithub size={22} /> {t.title}
+            <h3 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
+              <FaGithub size={20} /> {t.title}
             </h3>
             {total > 0 && (
               <p className="text-sm text-muted">
@@ -93,44 +92,44 @@ export default function ContributionGraph({ user, total, contributions }: Props)
 
           {weeks.length > 0 ? (
             <>
-              <div className="overflow-x-auto pb-2">
-                <div className="inline-block min-w-max">
-                  {/* Miesiące */}
-                  <div
-                    className="grid text-xs text-muted mb-1"
-                    style={{ gridTemplateColumns: `repeat(${weeks.length}, 13px)` }}
-                  >
-                    {months.map((m) => (
-                      <span key={m.index} style={{ gridColumnStart: m.index + 1 }}>
-                        {m.label}
-                      </span>
-                    ))}
-                  </div>
+              {/* Wykres skaluje się do szerokości kontenera, bez przewijania poziomego */}
+              <div className="w-full">
+                {/* Miesiące */}
+                <div
+                  className="grid text-[10px] sm:text-xs text-muted mb-1 whitespace-nowrap"
+                  style={{ gridTemplateColumns: `repeat(${weeks.length}, minmax(0, 1fr))`, columnGap: `${GAP}px` }}
+                >
+                  {months.map((m) => (
+                    <span key={m.index} style={{ gridColumnStart: m.index + 1 }}>
+                      {m.label}
+                    </span>
+                  ))}
+                </div>
 
-                  {/* Siatka aktywności */}
-                  <div
-                    className="grid gap-[3px]"
-                    style={{
-                      gridTemplateRows: "repeat(7, 10px)",
-                      gridAutoFlow: "column",
-                      gridAutoColumns: "10px",
-                    }}
-                  >
-                    {weeks.map((w, wi) =>
-                      Array.from({ length: 7 }, (_, di) => {
-                        const c = w[di];
-                        return c ? (
-                          <div
-                            key={`${wi}-${di}`}
-                            title={tooltip(c)}
-                            className={`rounded-[2px] ${LEVEL_CLASSES[c.level]}`}
-                          />
-                        ) : (
-                          <div key={`${wi}-${di}`} />
-                        );
-                      })
-                    )}
-                  </div>
+                {/* Siatka aktywności */}
+                <div
+                  className="grid"
+                  style={{
+                    gap: `${GAP}px`,
+                    gridTemplateColumns: `repeat(${weeks.length}, minmax(0, 1fr))`,
+                    gridTemplateRows: "repeat(7, auto)",
+                    gridAutoFlow: "column",
+                  }}
+                >
+                  {weeks.map((w, wi) =>
+                    Array.from({ length: 7 }, (_, di) => {
+                      const c = w[di];
+                      return c ? (
+                        <div
+                          key={`${wi}-${di}`}
+                          title={tooltip(c)}
+                          className={`aspect-square rounded-[2px] ${LEVEL_CLASSES[c.level]}`}
+                        />
+                      ) : (
+                        <div key={`${wi}-${di}`} className="aspect-square" />
+                      );
+                    })
+                  )}
                 </div>
               </div>
 
@@ -165,6 +164,6 @@ export default function ContributionGraph({ user, total, contributions }: Props)
           )}
         </div>
       </motion.div>
-    </section>
+    </div>
   );
 }
