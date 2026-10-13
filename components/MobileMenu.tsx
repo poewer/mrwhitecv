@@ -3,16 +3,7 @@ import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/utils/translations";
-
-const SECTIONS = [
-  "myprofile",
-  "about",
-  "workexperience",
-  "skills",
-  "thesis",
-  "n8ncourse",
-  "contact",
-] as const;
+import { NAV_SECTIONS as SECTIONS } from "@/utils/navSections";
 
 export default function MobileMenu({ onClose }: { onClose: () => void }) {
   const { lang } = useLanguage();

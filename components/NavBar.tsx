@@ -3,16 +3,7 @@ import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/utils/translations";
-
-export const NAV_SECTIONS = [
-  "myprofile",
-  "about",
-  "workexperience",
-  "skills",
-  "thesis",
-  "n8ncourse",
-  "contact",
-] as const;
+import { NAV_SECTIONS } from "@/utils/navSections";
 
 export default function NavBar() {
   const { lang, toggleLanguage } = useLanguage();
